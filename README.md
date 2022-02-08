@@ -40,8 +40,8 @@ const green = ref(true)
 ```js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import atomStyle from '@vite-plugin-atom-style/core'
-import presetFower from '@vite-plugin-atom-style/preset-fower'
+import atomStyle from '@vite-plugin-vue-atom-style/core'
+import presetFower from '@vite-plugin-vue-atom-style/preset-fower'
 
 export default defineConfig({
   plugins: [
