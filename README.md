@@ -17,7 +17,7 @@ Vue3的原子类样式引擎，为了方便创造自己的原子类库
 - Vite
 
 ## 快速开始
-- 安装 `npm i vite-plugin-vue-atom-style @vite-plugin-vue-atom-style/preset-fower`
+- 安装 `npm i @vite-plugin-vue-atom-style/core @vite-plugin-vue-atom-style/preset-fower`
 
 ## 示例
 ```html
@@ -40,7 +40,7 @@ const green = ref(true)
 ```js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import atomStyle from 'vite-plugin-atom-style'
+import atomStyle from '@vite-plugin-atom-style/core'
 import presetFower from '@vite-plugin-atom-style/preset-fower'
 
 export default defineConfig({
