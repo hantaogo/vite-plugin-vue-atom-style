@@ -1,5 +1,5 @@
-import { mergeOptions } from './core/mergeOptions'
-import { generate } from './core/generate'
+import { mergeOptions } from './mergeOptions'
+import { generate } from './generate'
 
 export default (args = {}) => {
   const options = mergeOptions(args)
