@@ -1,0 +1,34 @@
+{
+  "name": "vite-plugin-vue-atom-style",
+  "description": "atomic class vite plugin for vue3",
+  "version": "0.0.2",
+  "author": "hantaogo",
+  "repository": "https://github.com/hantaogo/vite-plugin-vue-atom-style.git",
+  "license": "MIT",
+  "keywords": [
+    "vite",
+    "vue3",
+    "atomic class"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@vue/compiler-dom": "^3.2.29",
+    "@vue/compiler-sfc": "^3.2.29",
+    "rollup": "^2.67.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@vite-plugin-vue-atom-style/preset-fower",
+  "description": "a preset for vite-plugin-vue-atom-style",
+  "version": "0.0.1",
+  "author": "hantaogo",
+  "repository": "https://github.com/hantaogo/vite-plugin-vue-atom-style.git",
+  "license": "MIT",
+  "keywords": [
+    "vue3",
+    "vite",
+    "atomic class",
+    "fower"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "rollup": "^2.67.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
