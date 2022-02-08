@@ -17,7 +17,26 @@ Vue3的原子类样式引擎，为了方便创造自己的原子类库
 - Vite
 
 ## 快速开始
-- 安装 `npm i @vite-plugin-vue-atom-style/core @vite-plugin-vue-atom-style/preset-fower`
+
+第一步. 安装开发依赖
+```js
+npm i -D @vite-plugin-vue-atom-style/core @vite-plugin-vue-atom-style/preset-fower
+```
+
+第二步. 配置 vite.config.js
+```js
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import atomStyle from '@vite-plugin-vue-atom-style/core'
+import presetFower from '@vite-plugin-vue-atom-style/preset-fower'
+
+export default defineConfig({
+  plugins: [
+    atomStyle({ presets: [presetFower] }),
+    vue(),
+  ],
+})
+```
 
 ## 示例
 ```html
@@ -35,111 +54,66 @@ const green = ref(true)
 </template>
 ```
 
-## Vite配置
+## 自定义规则
 
+示例：
 ```js
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import atomStyle from '@vite-plugin-vue-atom-style/core'
-import presetFower from '@vite-plugin-vue-atom-style/preset-fower'
-
-export default defineConfig({
-  plugins: [
-    atomStyle({
-      // 预制规则和标记
-      presets: [presetFower],
-      // 自定义规则
-      rules: [
-        // box-sizing
-        {
-          match: (k, config) => {
-            let v = ''
-            if (k === 'boxBorder') v = 'border-box'
-            if (k === 'boxContent') v = 'content-box'
-            return !!v
-          },
-          translate: (k, config) => {
-            let v = ''
-            if (k === 'boxBorder') v = 'border-box'
-            if (k === 'boxContent') v = 'content-box'
-            return {
-              'box-sizing': v
-            }
-          },
-        }
-      ],
-      // 自定义标记
-      marks: [
-        {
-          match: (k, config) => {
-            return k === 'hover'
-          },
-          translate: (k, config) => {
-            return {
-              pseudo: ':hover',
-            }
-          }
-        }
-      ],
-      // 组合的原子类（快捷方式）
-      shortcuts: {
-        'button': 'text2XL w200 h100 bgBlue300 shadowLg--hover',
+{
+  config: { // 自定义配置
+    unit: 'rpx', // 尺寸单位
+    markSeperator: '|', // 标记分隔符
+    sizeUnit: 8, // 某些无单位的数值使用的尺寸系数
+    theme: { // 主题
+      colors: {
+        transparent: 'transparent',
+        white: '#ffffff',
+        black: '#000',
       },
-    }),
-    vue(),
+      fontSizes: {
+        xs: 12,
+        sm: 14,
+        base: 16,
+        lg: 18,
+        xl: 20,
+      },
+    },
+  },
+  // 自定义规则
+  rules: [
+    // box-sizing
+    {
+      match: (k, config) => {
+        let v = ''
+        if (k === 'boxBorder') v = 'border-box'
+        if (k === 'boxContent') v = 'content-box'
+        return !!v
+      },
+      translate: (k, config) => {
+        let v = ''
+        if (k === 'boxBorder') v = 'border-box'
+        if (k === 'boxContent') v = 'content-box'
+        return {
+          'box-sizing': v
+        }
+      },
+    }
   ],
-})
-```
-
-## 配置文件
-
-```js
-import { colors } from './colors'
-
-export default {
-  unit: 'px',
-  markSeperator: '--',
-  sizeUnit: 4,
-  theme: {
-    colors,
-    fontSizes: {
-      xs: 12,
-      sm: 14,
-      base: 16,
-      lg: 18,
-      xl: 20,
-      '2xl': 24,
-      '3xl': 30,
-      '4xl': 36,
-      '5xl': 48,
-      '6xl': 60,
-      '7xl': 72,
-      '8xl': 96,
-      '9xl': 128,
-    },
-    fontWeights: {
-      hairline: 100,
-      thin: 200,
-      light: 300,
-      normal: 400,
-      medium: 500,
-      semibold: 600,
-      bold: 700,
-      extrabold: 800,
-      black: 900,
-    },
-    // px将会被替换为unit
-    shadows: {
-      sm: '0 1px 3px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0,0,0,0.01)',
-      base: '0 2px 4px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0,0,0,0.02)',
-      md: '0 4px 8px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0,0,0,0.02)',
-      lg: '0 8px 16px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0,0,0,0.02)',
-      xl: '0 14px 24px rgba(0, 0, 0, 0.16), 0 0 2px rgba(0,0,0,0.02)',
-      '2xl': '0 24px 48px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0,0,0,0.02)',
-      inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
-      outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
-      none: 'none',
-    },
+  // 自定义标记
+  marks: [
+    {
+      match: (k, config) => {
+        return k === 'hover'
+      },
+      translate: (k, config) => {
+        return {
+          pseudo: ':hover',
+        }
+      }
+    }
+  ],
+  // 组合的原子类（快捷方式）
+  shortcuts: {
+    'button': 'text2XL w200 h100 bgBlue300 shadowLg--hover',
   },
 }
 ```
