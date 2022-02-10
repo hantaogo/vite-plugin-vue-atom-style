@@ -14,16 +14,17 @@ const paddingMaps = {
   py: [padding + Top, padding + Bottom],
 }
 
-const regex = /^(p[ltrbxy]?)(\d+)$/i;
+const regex = `^(p[ltrbxy]?)(\-?)(\\d+)$`;
 
 const getPadding = (k, config) => {
   const result = k.match(regex)
   // result形如：null 或 ['p10', 'p', '10', ...]
-  if (!Array.isArray(result) || result.length < 3) {
+  if (!Array.isArray(result) || result.length < 4) {
     return
   }
   const key = result[1]
-  const value = Number.parseInt(result[2])
+  const sep = result[2]
+  const value = Number.parseInt(result[3])
   if (Number.isNaN(value)) {
     return
   }
@@ -31,7 +32,7 @@ const getPadding = (k, config) => {
   if (!styleName) {
     return
   }
-  return { styleName, value }
+  return { styleName, value : sep ? value : value * config.sizeUnit }
 }
 
 export default {
@@ -41,7 +42,7 @@ export default {
   translate: (k, config) => {
     const { styleName, value } = getPadding(k, config)   
     return {
-      [styleName]: `${value * config.sizeUnit}${config.unit}`
+      [styleName]: `${value}${config.unit}`
     }
   }
 }

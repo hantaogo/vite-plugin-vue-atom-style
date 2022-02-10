@@ -14,16 +14,19 @@ const marginMaps = {
   my: [margin + Top, margin + Bottom],
 }
 
-const regex = /^(m[ltrbxy]?)(\d+)$/i;
+const exp = `^(m[ltrbxy]?)(\-?)(\\d+)$`;
 
 const getMargin = (k, config) => {
+  const regex = new RegExp(exp, 'i')
   const result = k.match(regex)
+  console.log('result', result)
   // result形如：null 或 ['m10', 'm', '10', ...]
-  if (!Array.isArray(result) || result.length < 3) {
+  if (!Array.isArray(result) || result.length < 4) {
     return
   }
   const key = result[1]
-  const value = Number.parseInt(result[2])
+  const sep = result[2]
+  const value = Number.parseInt(result[3])
   if (Number.isNaN(value)) {
     return
   }
@@ -31,7 +34,7 @@ const getMargin = (k, config) => {
   if (!styleName) {
     return
   }
-  return { styleName, value }
+  return { styleName, value : sep ? value : value * config.sizeUnit }
 }
 
 export default {
@@ -41,7 +44,7 @@ export default {
   translate: (k, config) => {
     const { styleName, value } = getMargin(k, config)   
     return {
-      [styleName]: `${value * config.sizeUnit}${config.unit}`
+      [styleName]: `${value}${config.unit}`
     }
   }
 }
