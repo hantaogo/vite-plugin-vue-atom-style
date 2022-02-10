@@ -6,8 +6,9 @@ import flexShrink from './flexShrink'
 import fontSize from './fontSize'
 import fontStyle from './fontStyle'
 import fontWeight from './fontWeight'
-import shadow from './shadow'
 import color from './color'
+import lineHeight from './lineHeight'
+import shadow from './shadow'
 import opacity from './opacity'
 import backgroundColor from './backgroundColor'
 import spacing from './spacings'
@@ -25,8 +26,9 @@ export default [
   fontSize,
   fontStyle,
   fontWeight,
-  shadow,
   color,
+  lineHeight,
+  shadow,
   opacity,
   backgroundColor,
   spacing,
