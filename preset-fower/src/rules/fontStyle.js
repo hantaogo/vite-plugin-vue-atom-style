@@ -1,9 +1,9 @@
 const data = {
   italic: {
-    '	font-style': 'italic',
+    'font-style': 'italic',
   },
   notitalic: {
-    '	font-style': 'normal',
+    'font-style': 'normal',
   },
 }
 
