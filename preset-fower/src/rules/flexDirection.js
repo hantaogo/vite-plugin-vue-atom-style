@@ -1,3 +1,5 @@
+const key = 'flexdirection'
+
 const data = {
   row: {
     'flex-direction': 'row',
@@ -15,7 +17,7 @@ const data = {
  */
 export default {
   match: (k, config) => {
-    if (k.startsWith('flexdirection')) {
+    if (k.startsWith(key)) {
       const [_, value] = k.split(config.vs)
       return !!data[value]
     } else {
@@ -23,7 +25,7 @@ export default {
     }
   },
   translate: (k, config, obj) => {
-    if (k.startsWith('flexdirection')) {
+    if (k.startsWith(key)) {
       const [_, value] = k.split(config.vs)
       return {
         display: 'flex',
