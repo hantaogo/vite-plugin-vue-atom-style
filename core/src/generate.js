@@ -25,7 +25,7 @@ export const generate = (code, options) => {
       }
 
       // 生成css
-      const { selector, pseudo, ...style } = obj
+      const { prefix, selector, pseudo, ...style } = obj
 
       let styleString = ''
       for (const k in style) {
@@ -33,7 +33,11 @@ export const generate = (code, options) => {
         styleString += `${k}: ${v}; `
       }
 
-      css += `.${className}` + (pseudo || '') + (selector ? ` ${selector}` : '') + ` { ${styleString}}\n`
+      // 支持多个伪类
+      const pseudos = Array.isArray(pseudo) ? pseudo : [pseudo || '']
+      for (const p of pseudos) {
+        css += (prefix || '') + `.${className}` + (p || '') + (selector ? ` ${selector}` : '') + ` { ${styleString}}\n`
+      }
     }
   }
   return css

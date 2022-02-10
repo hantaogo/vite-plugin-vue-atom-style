@@ -4,6 +4,8 @@ import FontStyle from '@/views/FontStyle.vue'
 import Color from '@/views/Color.vue'
 import LineHeight from '@/views/LineHeight.vue'
 import ListType from '@/views/ListType.vue'
+import BackgroundColor from '@/views/BackgroundColor.vue'
+import PlaceholderColor from '@/views/PlaceholderColor.vue'
 
 export const routes = [
   {
@@ -29,5 +31,13 @@ export const routes = [
   {
     path: '/ListType',
     component: ListType,
+  },
+  {
+    path: '/BackgroundColor',
+    component: BackgroundColor,
+  },
+  {
+    path: '/PlaceholderColor',
+    component: PlaceholderColor,
   },
 ]

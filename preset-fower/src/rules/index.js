@@ -12,6 +12,7 @@ import listType from './listType'
 import shadow from './shadow'
 import opacity from './opacity'
 import backgroundColor from './backgroundColor'
+import placeholderColor from './placeholderColor'
 import spacing from './spacings'
 import boxSizing from './boxSizing'
 import size from './size'
@@ -28,11 +29,12 @@ export default [
   fontStyle,
   fontWeight,
   color,
+  backgroundColor,
+  placeholderColor,
   lineHeight,
   listType,
   shadow,
   opacity,
-  backgroundColor,
   spacing,
   boxSizing,
   size,

@@ -1,6 +1,6 @@
-const key1 = 'bgcolor'
-const key2 = 'bg'
-const styleName = 'background-color'
+const key1 = 'placeholdercolor'
+const key2 = 'placeholder'
+const styleName = 'color'
 
 const getColor = (k, config) => {
   if (k.startsWith(`${key1}${config.vs}`)) {
@@ -24,6 +24,8 @@ export default {
   translate: (k, config) => {
     const color = getColor(k, config)
     return {
+      prefix: 'input',
+      pseudo: '::placeholder',
       [styleName]: color
     }
   }
