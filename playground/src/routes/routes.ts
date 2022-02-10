@@ -16,6 +16,7 @@ import BorderWidth from '@/views/BorderWidth.vue'
 import BorderColor from '@/views/BorderColor.vue'
 import BorderStyle from '@/views/BorderStyle.vue'
 import Ring from '@/views/Ring.vue'
+import Grid from '@/views/Grid.vue'
 
 export const routes = [
   {
@@ -89,5 +90,9 @@ export const routes = [
   {
     path: '/Ring',
     component: Ring,
+  },
+  {
+    path: '/Grid',
+    component: Grid,
   },
 ]

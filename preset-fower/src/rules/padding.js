@@ -28,11 +28,11 @@ const getPadding = (k, config) => {
   if (Number.isNaN(value)) {
     return
   }
-  const styleName = paddingMaps[key]
-  if (!styleName) {
+  const styleNames = paddingMaps[key]
+  if (!styleNames) {
     return
   }
-  return { styleName, value : sep ? value : value * config.sizeUnit }
+  return { styleNames, value : sep ? value : value * config.sizeUnit }
 }
 
 export default {
@@ -40,9 +40,11 @@ export default {
     return !!getPadding(k, config)
   },
   translate: (k, config) => {
-    const { styleName, value } = getPadding(k, config)   
-    return {
-      [styleName]: `${value}${config.unit}`
+    const { styleNames, value } = getPadding(k, config)
+    const obj = {}
+    for (const styleName of styleNames) {
+      obj[styleName] = `${value}${config.unit}`
     }
+    return obj
   }
 }

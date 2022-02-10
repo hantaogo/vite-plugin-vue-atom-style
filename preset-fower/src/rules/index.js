@@ -28,6 +28,7 @@ import borderWidth from './borderWidth'
 import borderColor from './borderColor'
 import borderStyle from './borderStyle'
 import ring from './ring'
+import grid from './grid'
 
 export default [
   flex,
@@ -60,4 +61,5 @@ export default [
   borderColor,
   borderStyle,
   ring,
+  grid,
 ]
