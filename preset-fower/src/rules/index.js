@@ -1,4 +1,5 @@
 import flex from './flex'
+import flexDirection from './flexDirection'
 import fontSize from './fontSize'
 import fontWeight from './fontWeight'
 import shadow from './shadow'
@@ -13,6 +14,7 @@ import padding from './padding'
 
 export default [
   flex,
+  flexDirection,
   fontSize,
   fontWeight,
   shadow,

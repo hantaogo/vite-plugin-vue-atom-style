@@ -1,37 +1,42 @@
 const data = {
-  row: {
-    'flex-direction': 'row',
+  flexauto: {
+    'flex': '1 1 auto',
   },
-  column: {
-    'flex-direction': 'column',
+  flexinitial: {
+    'flex': '0 1 auto',
+  },
+  flexnone: {
+    'flex': 'none',
   },
 }
 
 /**
  * flex支持
- * row
- * column
- * flexDirection
+ * flexAuto flex: 1 1 auto;
+ * flexInitial flex: 0 1 auto;
+ * flexNone flex: 'none';
+ * flex-1-2-auto flex: 1-2-auto;
  */
 export default {
   match: (k, config) => {
-    if (k.startsWith('flexdirection')) {
+    if (data[k]) {
       return true
-    } else {
-      return !!data[k]
+    } else if (k.startsWith(`flex`)) {
+      return true
     }
+    return false
   },
   translate: (k, config, obj) => {
-    if (k.startsWith('flexdirection')) {
-      const [_, value] = k.split(config.valueSeperator)
-      return {
-        display: 'flex',
-        'flex-direction': value
-      }
-    } else {
+    if (data[k]) {
       return {
         display: 'flex',
         ...data[k],
+      }
+    } else if (k.startsWith('flex')) {
+      const [_, ...value] = k.split(config.vs)
+      return {
+        display: 'flex',
+        'flex': value.join(' ')
       }
     }
   }
