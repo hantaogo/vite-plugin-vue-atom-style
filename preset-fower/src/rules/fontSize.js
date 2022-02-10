@@ -1,9 +1,17 @@
 const getFontSize = (k, config) => {
-  if (!k.startsWith('text')) {
-    return
+  // text-{value} font-size: {value};
+  if (k.startsWith(`text${config.vs}`)) {
+    const [_, value] = k.split(config.vs)
+    const size = Number.parseInt(value)
+    if (Number.isNaN(size)) {
+      return
+    }
+    return size
+  } else if (k.startsWith('text')) {
+    // text2XL
+    const size = k.replace('text', '')
+    return config.theme.fontSizes[size]
   }
-  const size = k.replace('text', '')
-  return config.theme.fontSizes[size]
 }
 
 export default {
