@@ -3,6 +3,7 @@ import Flex from '@/views/Flex.vue'
 import FontStyle from '@/views/FontStyle.vue'
 import Color from '@/views/Color.vue'
 import LineHeight from '@/views/LineHeight.vue'
+import ListType from '@/views/ListType.vue'
 
 export const routes = [
   {
@@ -24,5 +25,9 @@ export const routes = [
   {
     path: '/LineHeight',
     component: LineHeight,
+  },
+  {
+    path: '/ListType',
+    component: ListType,
   },
 ]

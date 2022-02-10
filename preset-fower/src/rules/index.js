@@ -8,6 +8,7 @@ import fontStyle from './fontStyle'
 import fontWeight from './fontWeight'
 import color from './color'
 import lineHeight from './lineHeight'
+import listType from './listType'
 import shadow from './shadow'
 import opacity from './opacity'
 import backgroundColor from './backgroundColor'
@@ -28,6 +29,7 @@ export default [
   fontWeight,
   color,
   lineHeight,
+  listType,
   shadow,
   opacity,
   backgroundColor,
