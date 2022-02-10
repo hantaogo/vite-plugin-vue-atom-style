@@ -21,6 +21,8 @@ import padding from './padding'
 import textAlignment from './textAlignment'
 import textDecoration from './textDecoration'
 import textTransform from './textTransform'
+import backgroundClip from './backgroundClip'
+import gradient from './gradient'
 
 export default [
   flex,
@@ -46,4 +48,6 @@ export default [
   textAlignment,
   textDecoration,
   textTransform,
+  backgroundClip,
+  gradient,
 ]

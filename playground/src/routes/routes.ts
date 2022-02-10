@@ -9,6 +9,8 @@ import PlaceholderColor from '@/views/PlaceholderColor.vue'
 import TextAlignment from '@/views/TextAlignment.vue'
 import TextDecoration from '@/views/TextDecoration.vue'
 import TextTransform from '@/views/TextTransform.vue'
+import BackgroundClip from '@/views/BackgroundClip.vue'
+import Gradient from '@/views/Gradient.vue'
 
 export const routes = [
   {
@@ -54,5 +56,13 @@ export const routes = [
   {
     path: '/TextTransform',
     component: TextTransform,
+  },
+  {
+    path: '/BackgroundClip',
+    component: BackgroundClip,
+  },
+  {
+    path: '/Gradient',
+    component: Gradient,
   },
 ]
