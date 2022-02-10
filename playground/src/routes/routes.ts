@@ -11,6 +11,7 @@ import TextDecoration from '@/views/TextDecoration.vue'
 import TextTransform from '@/views/TextTransform.vue'
 import BackgroundClip from '@/views/BackgroundClip.vue'
 import Gradient from '@/views/Gradient.vue'
+import BorderRadius from '@/views/BorderRadius.vue'
 
 export const routes = [
   {
@@ -65,4 +66,8 @@ export const routes = [
     path: '/Gradient',
     component: Gradient,
   },
+  {
+    path: '/BorderRadius',
+    component: BorderRadius,
+  }
 ]
