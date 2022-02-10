@@ -18,6 +18,9 @@ import boxSizing from './boxSizing'
 import size from './size'
 import margin from './margin'
 import padding from './padding'
+import textAlignment from './textAlignment'
+import textDecoration from './textDecoration'
+import textTransform from './textTransform'
 
 export default [
   flex,
@@ -40,4 +43,7 @@ export default [
   size,
   margin,
   padding,
+  textAlignment,
+  textDecoration,
+  textTransform,
 ]
