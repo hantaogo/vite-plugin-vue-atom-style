@@ -4,6 +4,7 @@ import flexWrap from './flexWrap'
 import flexGrow from './flexGrow'
 import flexShrink from './flexShrink'
 import fontSize from './fontSize'
+import fontStyle from './fontStyle'
 import fontWeight from './fontWeight'
 import shadow from './shadow'
 import color from './color'
@@ -22,6 +23,7 @@ export default [
   flexGrow,
   flexShrink,
   fontSize,
+  fontStyle,
   fontWeight,
   shadow,
   color,
