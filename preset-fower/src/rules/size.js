@@ -10,18 +10,20 @@ const namesMap = {
 }
 
 const parse = (k, config) => {
-  const regex = /^([wh]|square|circle|min[hw]|max[hw])(\d+)$/i;
+  const exp = `^([wh]|square|circle|min[hw]|max[hw])(\-?)(\\d+)$`
+  const regex = new RegExp(exp, 'i')
   const result = k.match(regex)
   // result形如：null 或 ['square100', 'square', '100', ...]
-  if (!Array.isArray(result) || result.length < 3) {
+  if (!Array.isArray(result) || result.length < 4) {
     return
   }
   const key = result[1]
-  const value = parseInt(result[2])
+  const sep = result[2]
+  const value = parseInt(result[3])
   if (Number.isNaN(value)) {
     return
   }
-  return { names: namesMap[key], value }
+  return { names: namesMap[key], value: sep ? value : value * config.sizeUnit }
 }
 
 export default {

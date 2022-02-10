@@ -19,7 +19,6 @@ const exp = `^(m[ltrbxy]?)(\-?)(\\d+)$`;
 const getMargin = (k, config) => {
   const regex = new RegExp(exp, 'i')
   const result = k.match(regex)
-  console.log('result', result)
   // result形如：null 或 ['m10', 'm', '10', ...]
   if (!Array.isArray(result) || result.length < 4) {
     return
