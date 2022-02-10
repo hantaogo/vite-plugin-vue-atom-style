@@ -24,6 +24,7 @@ import textTransform from './textTransform'
 import backgroundClip from './backgroundClip'
 import gradient from './gradient'
 import borderRadius from './borderRadius'
+import borderWidth from './borderWidth'
 
 export default [
   flex,
@@ -52,4 +53,5 @@ export default [
   backgroundClip,
   gradient,
   borderRadius,
+  borderWidth,
 ]

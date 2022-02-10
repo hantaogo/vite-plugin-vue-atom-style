@@ -12,6 +12,7 @@ import TextTransform from '@/views/TextTransform.vue'
 import BackgroundClip from '@/views/BackgroundClip.vue'
 import Gradient from '@/views/Gradient.vue'
 import BorderRadius from '@/views/BorderRadius.vue'
+import BorderWidth from '@/views/BorderWidth.vue'
 
 export const routes = [
   {
@@ -69,5 +70,9 @@ export const routes = [
   {
     path: '/BorderRadius',
     component: BorderRadius,
-  }
+  },
+  {
+    path: '/BorderWidth',
+    component: BorderWidth,
+  },
 ]
