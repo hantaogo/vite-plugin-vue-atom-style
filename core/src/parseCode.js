@@ -18,6 +18,7 @@ export const parseCode = (code, options) => {
             // 名为class，值为文本且不为空的属性，type 6 为属性，type 2 为文本
             // <div class="xxx yyy"></div>
             for (const className of prop.value.content.split(/\s+/)) {
+              console.log(className, prop)
               classNames.push(className)
             }
           }

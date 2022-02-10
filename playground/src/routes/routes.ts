@@ -13,6 +13,8 @@ import BackgroundClip from '@/views/BackgroundClip.vue'
 import Gradient from '@/views/Gradient.vue'
 import BorderRadius from '@/views/BorderRadius.vue'
 import BorderWidth from '@/views/BorderWidth.vue'
+import BorderColor from '@/views/BorderColor.vue'
+import BorderStyle from '@/views/BorderStyle.vue'
 
 export const routes = [
   {
@@ -74,5 +76,13 @@ export const routes = [
   {
     path: '/BorderWidth',
     component: BorderWidth,
+  },
+  {
+    path: '/BorderColor',
+    component: BorderColor,
+  },
+  {
+    path: '/BorderStyle',
+    component: BorderStyle,
   },
 ]

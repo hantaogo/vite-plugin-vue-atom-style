@@ -25,6 +25,8 @@ import backgroundClip from './backgroundClip'
 import gradient from './gradient'
 import borderRadius from './borderRadius'
 import borderWidth from './borderWidth'
+import borderColor from './borderColor'
+import borderStyle from './borderStyle'
 
 export default [
   flex,
@@ -54,4 +56,6 @@ export default [
   gradient,
   borderRadius,
   borderWidth,
+  borderColor,
+  borderStyle,
 ]
