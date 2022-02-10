@@ -1,21 +1,38 @@
 const data = {
-  column: {
-    'flex-direction': 'column'
+  row: {
+    'flex-direction': 'row',
   },
-  toCenter: {
-    'justify-content': 'center',
-    'align-items': 'center'
+  column: {
+    'flex-direction': 'column',
   },
 }
 
+/**
+ * flex支持
+ * row
+ * column
+ * flexDirection
+ */
 export default {
   match: (k, config) => {
-    return !!data[k]
+    if (k.startsWith('flexdirection')) {
+      return true
+    } else {
+      return !!data[k]
+    }
   },
-  translate: (k, config) => {
-    return {
-      display: 'flex',
-      ...data[k],
+  translate: (k, config, obj) => {
+    if (k.startsWith('flexdirection')) {
+      const [_, value] = k.split(config.valueSeperator)
+      return {
+        display: 'flex',
+        'flex-direction': value
+      }
+    } else {
+      return {
+        display: 'flex',
+        ...data[k],
+      }
     }
   }
 }
