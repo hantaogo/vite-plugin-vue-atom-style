@@ -15,6 +15,7 @@ import BorderRadius from '@/views/BorderRadius.vue'
 import BorderWidth from '@/views/BorderWidth.vue'
 import BorderColor from '@/views/BorderColor.vue'
 import BorderStyle from '@/views/BorderStyle.vue'
+import Ring from '@/views/Ring.vue'
 
 export const routes = [
   {
@@ -84,5 +85,9 @@ export const routes = [
   {
     path: '/BorderStyle',
     component: BorderStyle,
+  },
+  {
+    path: '/Ring',
+    component: Ring,
   },
 ]

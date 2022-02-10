@@ -27,6 +27,7 @@ import borderRadius from './borderRadius'
 import borderWidth from './borderWidth'
 import borderColor from './borderColor'
 import borderStyle from './borderStyle'
+import ring from './ring'
 
 export default [
   flex,
@@ -58,4 +59,5 @@ export default [
   borderWidth,
   borderColor,
   borderStyle,
+  ring,
 ]
