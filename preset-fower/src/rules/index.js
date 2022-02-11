@@ -1,3 +1,4 @@
+import layout from './layout'
 import flex from './flex'
 import flexDirection from './flexDirection'
 import flexWrap from './flexWrap'
@@ -49,6 +50,7 @@ import animate from './animate'
 import transform from './transform'
 
 export default [
+  layout,
   flex,
   flexDirection,
   flexWrap,

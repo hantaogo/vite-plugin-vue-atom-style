@@ -5,6 +5,8 @@ export const generate = (code, options) => {
   const matchResults = parseCode(code, options)
   let css = ''
 
+  const classNames = Object.keys(matchResults)
+
   for (const className in matchResults) {
 
     // 快捷方式时，可能包含多个原子
@@ -15,14 +17,14 @@ export const generate = (code, options) => {
       const { name, rule, marks } = result
 
       // 翻译规则
-      let obj = rule.translate(name, options.config)
+      let obj = rule.translate(name, options.config, classNames)
       if (!obj) {
         continue
       }
 
       // 翻译标记
       for (const { markName, mark } of marks) {
-        obj = Object.assign(obj, mark.translate(markName, options.config, obj))
+        obj = Object.assign(obj, mark.translate(markName, options.config, obj, classNames))
       }
 
       // 生成css

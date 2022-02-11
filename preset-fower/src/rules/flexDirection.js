@@ -1,13 +1,5 @@
-const key = 'flexdirection'
-
-const data = {
-  row: {
-    'flex-direction': 'row',
-  },
-  column: {
-    'flex-direction': 'column',
-  },
-}
+const styleName = 'flex-direction'
+const regex = /^(row|column|flexdirection-.+)$/i
 
 /**
  * flex 方向
@@ -17,24 +9,28 @@ const data = {
  */
 export default {
   match: (k, config) => {
-    if (k.startsWith(key)) {
-      const [_, value] = k.split('-')
-      return !!data[value]
-    } else {
-      return !!data[k]
-    }
+    return regex.test(k)
   },
-  translate: (k, config, obj) => {
-    if (k.startsWith(key)) {
-      const [_, value] = k.split('-')
-      return {
-        display: 'flex',
-        'flex-direction': value
-      }
-    } else {
-      return {
-        display: 'flex',
-        ...data[k],
+  translate: (k, config) => {
+    const result = k.match(regex)
+    if (Array.isArray(result) && result.length >= 2) {
+      const [_, key] = result
+      if (key === 'row') {
+        return {
+          display: 'flex',
+          [styleName]: 'row',
+        }
+      } else if (key === 'column') {
+        return {
+          display: 'flex',
+          [styleName]: 'column',
+        }
+      } else {
+        const value = key.replace('flexdirection-', '')
+        return {
+          display: 'flex',
+          [styleName]: value,
+        }
       }
     }
   }

@@ -41,11 +41,16 @@ import Delay from '@/views/Delay.vue'
 import Ease from '@/views/Ease.vue'
 import Animate from '@/views/Animate.vue'
 import Transform from '@/views/Transform.vue'
+import ToCenter from '@/views/ToCenter.vue'
 
 export const routes = [
   {
     path: '/',
     component: Base,
+  },
+  {
+    path: '/ToCenter',
+    component: ToCenter,
   },
   {
     path: '/Flex',
