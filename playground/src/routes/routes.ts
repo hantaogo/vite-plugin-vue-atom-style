@@ -27,6 +27,7 @@ import Position from '@/views/Position.vue'
 import TopRightBottomLeft from '@/views/TopRightBottomLeft.vue'
 import ZIndex from '@/views/ZIndex.vue'
 import Visibility from '@/views/Visibility.vue'
+import Overflow from '@/views/Overflow.vue'
 
 export const routes = [
   {
@@ -144,5 +145,9 @@ export const routes = [
   {
     path: '/Visibility',
     component: Visibility,
+  },
+  {
+    path: '/Overflow',
+    component: Overflow,
   },
 ]

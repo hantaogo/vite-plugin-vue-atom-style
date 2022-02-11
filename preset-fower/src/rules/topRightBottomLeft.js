@@ -6,7 +6,6 @@ const getStyle = (k, config) => {
     const key = result[1]
     const value = result[2]
     const percent = result[3]
-    console.log(key, value, percent)
     return {
       [key]: percent ? `${value}%` : `${value}${config.unit}`,
     }

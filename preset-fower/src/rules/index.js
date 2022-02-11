@@ -35,6 +35,7 @@ import position from './position'
 import topRightBottomLeft from './topRightBottomLeft'
 import zIndex from './zIndex'
 import visibility from './visibility'
+import overflow from './overflow'
 
 export default [
   flex,
@@ -74,4 +75,5 @@ export default [
   topRightBottomLeft,
   zIndex,
   visibility,
+  overflow,
 ]
