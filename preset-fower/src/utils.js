@@ -32,7 +32,6 @@ export const parseSize = (str, defaultUnit = '', unitSize = 1) => {
     if (!Number.isNaN(num)) {
       const i = unit ? 1 : (unitSize || 1)
       const text = `${negative ? '-' : ''}${num * i}${unit || defaultUnit || ''}`
-      console.log('parseSize', str, defaultUnit, unitSize, ' => ', text)
       return text
     }
   }

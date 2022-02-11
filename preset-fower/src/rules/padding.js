@@ -1,10 +1,12 @@
+import { parseSize } from '../utils'
+
 const padding = 'padding'
 const Top = '-top'
 const Left = '-left'
 const Right = '-right'
 const Bottom = '-bottom'
 
-const paddingMaps = {
+const data = {
   p: [padding],
   pl: [padding + Left],
   pt: [padding + Top],
@@ -14,36 +16,38 @@ const paddingMaps = {
   py: [padding + Top, padding + Bottom],
 }
 
-const getPadding = (k, config) => {
-  const regex = /^(p[ltrbxy]?)(\-?)(\d+)$/i
+const regex = /^(p[ltrbxy]?)(\-?)(.+)$/i
+
+const getStyle = (k, config) => {
   const result = k.match(regex)
   // result形如：null 或 ['p10', 'p', '10', ...]
   if (!Array.isArray(result) || result.length < 4) {
     return
   }
-  const key = result[1]
-  const sep = result[2]
-  const value = Number.parseInt(result[3])
-  if (Number.isNaN(value)) {
-    return
-  }
-  const styleNames = paddingMaps[key]
+  const [_, key, sep, value] = result
+  const styleNames = data[key]
   if (!styleNames) {
     return
   }
-  return { styleNames, value : sep ? value : value * config.unitSize }
+  const size = parseSize(value, config.unit, sep ? 1 : config.unitSize)
+  if (size) {
+    return { styleNames, size }
+  }
 }
 
 export default {
   match: (k, config) => {
-    return !!getPadding(k, config)
+    return regex.test(k)
   },
   translate: (k, config) => {
-    const { styleNames, value } = getPadding(k, config)
-    const obj = {}
-    for (const styleName of styleNames) {
-      obj[styleName] = `${value}${config.unit}`
+    const result = getStyle(k, config)
+    if (result) {
+      const { styleNames, size } = result
+      const obj = {}
+      for (const styleName of styleNames) {
+        obj[styleName] = size
+      }
+      return obj
     }
-    return obj
   }
 }
