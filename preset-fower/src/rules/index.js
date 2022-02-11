@@ -38,6 +38,7 @@ import zIndex from './zIndex'
 import visibility from './visibility'
 import overflow from './overflow'
 import outline from './outline'
+import cursor from './cursor'
 
 export default [
   flex,
@@ -80,4 +81,5 @@ export default [
   visibility,
   overflow,
   outline,
+  cursor,
 ]

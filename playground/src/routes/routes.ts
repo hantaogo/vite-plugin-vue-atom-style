@@ -32,6 +32,7 @@ import Overflow from '@/views/Overflow.vue'
 import Shadow from '@/views/Shadow.vue'
 import Opacity from '@/views/Opacity.vue'
 import Outline from '@/views/Outline.vue'
+import Cursor from '@/views/Cursor.vue'
 
 export const routes = [
   {
@@ -169,5 +170,9 @@ export const routes = [
   {
     path: '/Outline',
     component: Outline,
+  },
+  {
+    path: '/Cursor',
+    component: Cursor,
   },
 ]
