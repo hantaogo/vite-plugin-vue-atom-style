@@ -2,10 +2,10 @@ const getColor = (k, config) => {
   const color = config.theme.colors[k]
   if (color) {
     return color
-  } else if (k.startsWith(`color${config.vs}`)) {
-    const [_, hex] = k.split(config.vs)
-    if (hex) {
-      return `#${hex}`
+  } else if (k.startsWith(`color-`)) {
+    const c = k.replace('color-', '')
+    if (c) {
+      return `#${c}`
     }
   }
 }

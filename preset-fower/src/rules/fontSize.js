@@ -1,7 +1,7 @@
 const getFontSize = (k, config) => {
   // text-{value} font-size: {value};
-  if (k.startsWith(`text${config.vs}`)) {
-    const [_, value] = k.split(config.vs)
+  if (k.startsWith(`text-`)) {
+    const [_, value] = k.split('-')
     const size = Number.parseInt(value)
     if (Number.isNaN(size)) {
       return

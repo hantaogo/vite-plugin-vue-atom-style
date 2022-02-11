@@ -28,7 +28,8 @@ import borderWidth from './borderWidth'
 import borderColor from './borderColor'
 import borderStyle from './borderStyle'
 import ring from './ring'
-import grid from './grid'
+import gridTemplateColumns from './gridTemplateColumns'
+import gap from './gap'
 import boxAlignment from './boxAlignment'
 import display from './display'
 import position from './position'
@@ -69,7 +70,8 @@ export default [
   borderColor,
   borderStyle,
   ring,
-  grid,
+  gridTemplateColumns,
+  gap,
   boxAlignment,
   display,
   position,

@@ -3,8 +3,8 @@ const key2 = 'border'
 const styleName = 'border-color'
 
 const getColor = (k, config) => {
-  if (k.startsWith(`${key1}${config.vs}`)) {
-    const [_, color] = k.split(config.vs)
+  if (k.startsWith(`${key1}-`)) {
+    const [_, color] = k.split('-')
     if (color) {
       return `#${color}`
     }

@@ -16,13 +16,13 @@ const data = {
 const getStyle = (k, config) => {
   let foundKey = undefined
   for (const key in data) {
-    if (k.startsWith(`${key}${config.vs}`)) {
+    if (k.startsWith(`${key}-`)) {
       foundKey = key
       break
     }
   }
   if (foundKey) {
-    const value = k.replace(`${foundKey}${config.vs}`, '')
+    const value = k.replace(`${foundKey}-`, '')
     if (value) {
       return {
         [data[foundKey]]: value

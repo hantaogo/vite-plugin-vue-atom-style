@@ -37,8 +37,8 @@ const getStyle = (k, config) => {
     }
   } else {
     for (const key in typesMap) {
-      if (k.startsWith(`${key}${config.vs}`)) {
-        const [_, value] = k.split(config.vs)
+      if (k.startsWith(`${key}-`)) {
+        const [_, value] = k.split('-')
         const size = Number.parseInt(value)
         if (!Number.isNaN(size)) {
           const obj = {}

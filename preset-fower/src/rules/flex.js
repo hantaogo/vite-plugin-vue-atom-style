@@ -21,7 +21,7 @@ export default {
   match: (k, config) => {
     if (data[k]) {
       return true
-    } else if (k.startsWith(`flex${config.vs}`)) {
+    } else if (k.startsWith(`flex-`)) {
       return true
     }
     return false
@@ -32,11 +32,11 @@ export default {
         display: 'flex',
         ...data[k],
       }
-    } else if (k.startsWith(`flex${config.vs}`)) {
-      const [_, ...value] = k.split(config.vs)
+    } else if (k.startsWith(`flex-`)) {
+      const val = k.replace('flex-', '').replace(/\-/g, ' ')
       return {
         display: 'flex',
-        'flex': value.join(' ')
+        'flex': val
       }
     }
   }

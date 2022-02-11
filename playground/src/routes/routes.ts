@@ -16,7 +16,8 @@ import BorderWidth from '@/views/BorderWidth.vue'
 import BorderColor from '@/views/BorderColor.vue'
 import BorderStyle from '@/views/BorderStyle.vue'
 import Ring from '@/views/Ring.vue'
-import Grid from '@/views/Grid.vue'
+import GridTemplateColumns from '@/views/GridTemplateColumns.vue'
+import Gap from '@/views/Gap.vue'
 import JustifyContent from '@/views/JustifyContent.vue'
 import AlignItems from '@/views/AlignItems.vue'
 import AlignContent from '@/views/AlignContent.vue'
@@ -106,8 +107,12 @@ export const routes = [
     component: Ring,
   },
   {
-    path: '/Grid',
-    component: Grid,
+    path: '/GridTemplateColumns',
+    component: GridTemplateColumns,
+  },
+  {
+    path: '/Gap',
+    component: Gap,
   },
   {
     path: '/JustifyContent',

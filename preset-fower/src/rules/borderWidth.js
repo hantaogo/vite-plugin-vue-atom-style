@@ -1,5 +1,3 @@
-const regex = /^border(top|right|bottom|left)?(\-)?(\d+)$/i
-
 const getStyle = (k, config) => {
   if (k === 'border') {
     return {
@@ -22,7 +20,7 @@ const getStyle = (k, config) => {
       'border-left-width': `1${config.unit}`,
     }
   }
-  const result = k.match(regex)
+  const result = k.match(/^border(top|right|bottom|left)?(\-)?(\d+)$/i)
   if (Array.isArray(result) && result.length >= 4) {
     const [_, side, sep, value] = result
     let num = Number.parseInt(value)

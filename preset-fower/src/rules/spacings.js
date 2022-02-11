@@ -1,9 +1,9 @@
 const selector = '>*:not(:last-child)'
 
 const parse = (k, config) => {
-  if (k.startsWith(`spacex${config.vs}`)) {
+  if (k.startsWith(`spacex-`)) {
     // spaceX-10 横向间距10
-    const [_, val] = k.split(config.vs)
+    const [_, val] = k.split('-')
     const size = Number.parseInt(val)
     if (Number.isNaN(size)) {
       return
@@ -21,9 +21,9 @@ const parse = (k, config) => {
         'margin-right': `${size * config.sizeUnit}${config.unit}`
       }
     }
-  } else if (k.startsWith(`spacey${config.vs}`)) {
+  } else if (k.startsWith(`spacey-`)) {
     // spaceY-10 纵向间距10
-    const [_, val] = k.split(config.vs)
+    const [_, val] = k.split('-')
     const size = Number.parseInt(val)
     if (Number.isNaN(size)) {
       return
@@ -42,9 +42,9 @@ const parse = (k, config) => {
       selector,
       'margin-bottom': `${size * config.sizeUnit}${config.unit}`
     }
-  } else if (k.startsWith(`space${config.vs}`)) {
+  } else if (k.startsWith(`space-`)) {
     // space10 间距 10
-    const [_, val] = k.split(config.vs)
+    const [_, val] = k.split('-')
     const size = Number.parseInt(val)
     if (Number.isNaN(size)) {
       return

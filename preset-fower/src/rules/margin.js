@@ -14,10 +14,8 @@ const marginMaps = {
   my: [margin + Top, margin + Bottom],
 }
 
-const exp = `^(m[ltrbxy]?)(\-?)(\\d+)$`;
-
 const getMargin = (k, config) => {
-  const regex = new RegExp(exp, 'i')
+  const regex = /^(m[ltrbxy]?)(\-?)(\d+)$/i
   const result = k.match(regex)
   // result形如：null 或 ['m10', 'm', '10', ...]
   if (!Array.isArray(result) || result.length < 4) {

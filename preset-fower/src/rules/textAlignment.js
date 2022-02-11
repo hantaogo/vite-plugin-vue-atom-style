@@ -18,10 +18,12 @@ const data = {
 const getStyle = (k, config) => {
   if (data[k]) {
     return data[k]
-  } else if (k.startsWith(`textalign${config.vs}`)) {
-    const [_, value] = k.split('textalign')
-    return {
-      [styleName]: value
+  } else if (k.startsWith(`textalign-`)) {
+    const value = k.replace('textalign-', '')
+    if (value) {
+      return {
+        [styleName]: value
+      }
     }
   }
 }

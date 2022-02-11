@@ -13,10 +13,9 @@ const getStyle = (k, config) => {
     }
   }
   // outline-2px-dotted-red
-  const str = `outline${config.vs}`
+  const str = `outline-`
   if (k.startsWith(str)) {
-    const regex = new RegExp(`${config.vs}`, 'g')
-    const val = k.replace(str, '').replace(regex, ' ')
+    const val = k.replace(str, '').replace(/\-/g, ' ')
     return {
       'outline': val,
     }

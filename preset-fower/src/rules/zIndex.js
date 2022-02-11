@@ -5,7 +5,7 @@
  */
 
 const getStyle = (k, config) => {
-  const str = `zindex${config.vs}`
+  const str = `zindex-`
   if (k.startsWith(str)) {
     const z = Number.parseInt(k.replace(str, ''))
     if (!Number.isNaN(z)) {

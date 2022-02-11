@@ -5,7 +5,7 @@
  */
 
  const getStyle = (k, config) => {
-  const str = `opacity${config.vs}`
+  const str = `opacity-`
   if (k.startsWith(str)) {
     const z = Number.parseInt(k.replace(str, ''))
     if (!Number.isNaN(z)) {

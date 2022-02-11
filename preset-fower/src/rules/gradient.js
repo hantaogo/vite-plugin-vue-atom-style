@@ -1,7 +1,7 @@
 const styleName = 'background-image'
 
 const getColors = (k, config) => {
-  const [_, ...colors] = k.split(config.vs)
+  const [_, ...colors] = k.split('-')
   if (Array.isArray(colors) && colors.length >= 2) {
     const hexs = colors.map(t => config.theme.colors[t]).filter(t => t)
     if (hexs.length >= 2) {
@@ -11,14 +11,14 @@ const getColors = (k, config) => {
 }
 
 const getStyle = (k, config) => {
-  if (k.startsWith(`bggradientx${config.vs}`)) {
+  if (k.startsWith(`bggradientx-`)) {
     const colors = getColors(k, config)
     if (colors) {
       return {
         [styleName]: `linear-gradient(to right, ${colors.join(', ')})`
       }
     }
-  } else if (k.startsWith(`bggradienty${config.vs}`)) {
+  } else if (k.startsWith(`bggradienty-`)) {
     const colors = getColors(k, config)
     if (colors) {
       return {

@@ -18,7 +18,7 @@ const data = {
 export default {
   match: (k, config) => {
     if (k.startsWith(key)) {
-      const [_, value] = k.split(config.vs)
+      const [_, value] = k.split('-')
       return !!data[value]
     } else {
       return !!data[k]
@@ -26,7 +26,7 @@ export default {
   },
   translate: (k, config, obj) => {
     if (k.startsWith(key)) {
-      const [_, value] = k.split(config.vs)
+      const [_, value] = k.split('-')
       return {
         display: 'flex',
         'flex-direction': value

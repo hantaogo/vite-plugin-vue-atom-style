@@ -13,8 +13,8 @@ const getStyle = (k, config) => {
     return {
       [styleName]: data[k],
     }
-  } else if (k.startsWith(`position${config.vs}`)) {
-    const value = k.replace(`position${config.vs}`, '')
+  } else if (k.startsWith(`position-`)) {
+    const value = k.replace(`position-`, '')
     if (value) {
       return {
         [styleName]: value

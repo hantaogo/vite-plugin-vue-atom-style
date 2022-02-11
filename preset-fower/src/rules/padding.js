@@ -14,9 +14,8 @@ const paddingMaps = {
   py: [padding + Top, padding + Bottom],
 }
 
-const regex = `^(p[ltrbxy]?)(\-?)(\\d+)$`;
-
 const getPadding = (k, config) => {
+  const regex = /^(p[ltrbxy]?)(\-?)(\d+)$/i
   const result = k.match(regex)
   // result形如：null 或 ['p10', 'p', '10', ...]
   if (!Array.isArray(result) || result.length < 4) {
