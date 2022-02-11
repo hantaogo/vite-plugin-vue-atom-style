@@ -1,4 +1,14 @@
 import Base from '@/views/Base.vue'
+import ToCenter from '@/views/ToCenter.vue'
+import ToCenterX from '@/views/ToCenterX.vue'
+import ToCenterY from '@/views/ToCenterY.vue'
+import ToLeft from '@/views/ToLeft.vue'
+import ToRight from '@/views/ToRight.vue'
+import ToTop from '@/views/ToTop.vue'
+import ToBottom from '@/views/ToBottom.vue'
+import ToBetween from '@/views/ToBetween.vue'
+import ToAround from '@/views/ToAround.vue'
+import ToEvenly from '@/views/ToEvenly.vue'
 import Flex from '@/views/Flex.vue'
 import FontStyle from '@/views/FontStyle.vue'
 import Color from '@/views/Color.vue'
@@ -41,7 +51,6 @@ import Delay from '@/views/Delay.vue'
 import Ease from '@/views/Ease.vue'
 import Animate from '@/views/Animate.vue'
 import Transform from '@/views/Transform.vue'
-import ToCenter from '@/views/ToCenter.vue'
 
 export const routes = [
   {
@@ -51,6 +60,42 @@ export const routes = [
   {
     path: '/ToCenter',
     component: ToCenter,
+  },
+  {
+    path: '/ToCenterX',
+    component: ToCenterX,
+  },
+  {
+    path: '/ToCenterY',
+    component: ToCenterY,
+  },
+  {
+    path: '/ToLeft',
+    component: ToLeft,
+  },
+  {
+    path: '/ToRight',
+    component: ToRight,
+  },
+  {
+    path: '/ToTop',
+    component: ToTop,
+  },
+  {
+    path: '/ToBottom',
+    component: ToBottom,
+  },
+  {
+    path: '/ToBetween',
+    component: ToBetween,
+  },
+  {
+    path: '/ToAround',
+    component: ToAround,
+  },
+  {
+    path: '/ToEvenly',
+    component: ToEvenly,
   },
   {
     path: '/Flex',
