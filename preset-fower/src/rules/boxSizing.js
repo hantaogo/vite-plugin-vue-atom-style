@@ -1,16 +1,26 @@
+/**
+ * Box Sizing
+ * 
+ * boxBorder	box-sizing: border-box;
+ * boxContent	box-sizing: content-box;
+ */
+
+const styleName = 'box-sizing'
+
+const data = {
+  boxborder: {
+    [styleName]: 'border-box',
+  },
+  boxcontent: {
+    [styleName]: 'content-box',
+  },
+}
+
 export default {
   match: (k, config) => {
-    let v = ''
-    if (k === 'boxBorder') v = 'border-box'
-    if (k === 'boxContent') v = 'content-box'
-    return !!v
+    return !!data[k]
   },
   translate: (k, config) => {
-    let v = ''
-    if (k === 'boxBorder') v = 'border-box'
-    if (k === 'boxContent') v = 'content-box'
-    return {
-      'box-sizing': v
-    }
+    return data[k]
   },
 }

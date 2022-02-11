@@ -21,6 +21,7 @@ import JustifyContent from '@/views/JustifyContent.vue'
 import AlignItems from '@/views/AlignItems.vue'
 import AlignContent from '@/views/AlignContent.vue'
 import AlignSelf from '@/views/AlignSelf.vue'
+import BoxSizing from '@/views/BoxSizing.vue'
 
 export const routes = [
   {
@@ -115,4 +116,8 @@ export const routes = [
     path: '/AlignSelf',
     component: AlignSelf,
   },
+  {
+    path: '/BoxSizing',
+    component: BoxSizing,
+  }
 ]
