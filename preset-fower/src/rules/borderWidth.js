@@ -1,4 +1,4 @@
-const regex = /border(top|right|bottom|left)?(\-)?(\d+)/i
+const regex = /^border(top|right|bottom|left)?(\-)?(\d+)$/i
 
 const getStyle = (k, config) => {
   if (k === 'border') {

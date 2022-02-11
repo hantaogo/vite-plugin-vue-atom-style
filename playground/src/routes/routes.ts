@@ -30,6 +30,7 @@ import Visibility from '@/views/Visibility.vue'
 import Overflow from '@/views/Overflow.vue'
 import Shadow from '@/views/Shadow.vue'
 import Opacity from '@/views/Opacity.vue'
+import Outline from '@/views/Outline.vue'
 
 export const routes = [
   {
@@ -159,5 +160,9 @@ export const routes = [
   {
     path: '/Opacity',
     component: Opacity,
+  },
+  {
+    path: '/Outline',
+    component: Outline,
   },
 ]
