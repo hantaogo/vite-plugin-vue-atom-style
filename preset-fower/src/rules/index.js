@@ -42,6 +42,11 @@ import cursor from './cursor'
 import appearance from './appearance'
 import userSelect from './userSelect'
 import transition from './transition'
+import duration from './duration'
+import delay from './delay'
+import ease from './ease'
+import animate from './animate'
+import transform from './transform'
 
 export default [
   flex,
@@ -88,4 +93,9 @@ export default [
   appearance,
   userSelect,
   transition,
+  duration,
+  delay,
+  ease,
+  animate,
+  transform,
 ]

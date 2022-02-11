@@ -36,6 +36,11 @@ import Cursor from '@/views/Cursor.vue'
 import Appearance from '@/views/Appearance.vue'
 import UserSelect from '@/views/UserSelect.vue'
 import Transition from '@/views/Transition.vue'
+import Duration from '@/views/Duration.vue'
+import Delay from '@/views/Delay.vue'
+import Ease from '@/views/Ease.vue'
+import Animate from '@/views/Animate.vue'
+import Transform from '@/views/Transform.vue'
 
 export const routes = [
   {
@@ -189,5 +194,25 @@ export const routes = [
   {
     path: '/Transition',
     component: Transition,
+  },
+  {
+    path: '/Duration',
+    component: Duration,
+  },
+  {
+    path: '/Delay',
+    component: Delay,
+  },
+  {
+    path: '/Ease',
+    component: Ease,
+  },
+  {
+    path: '/Animate',
+    component: Animate,
+  },
+  {
+    path: '/Transform',
+    component: Transform,
   },
 ]

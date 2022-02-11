@@ -1,4 +1,5 @@
 import { parseCode } from './parseCode'
+import { objectToKeyframesCss } from './utils/animate'
 
 export const generate = (code, options) => {
   const matchResults = parseCode(code, options)
@@ -25,8 +26,9 @@ export const generate = (code, options) => {
       }
 
       // 生成css
-      const { prefix, selector, pseudo, ...style } = obj
+      const { prefix, selector, pseudo, animate, ...style } = obj
 
+      // 样式代码
       let styleString = ''
       for (const k in style) {
         const v = style[k]
@@ -37,6 +39,12 @@ export const generate = (code, options) => {
       const pseudos = Array.isArray(pseudo) ? pseudo : [pseudo || '']
       for (const p of pseudos) {
         css += (prefix || '') + `.${className}` + (p || '') + (selector ? ` ${selector}` : '') + ` { ${styleString}}\n`
+      }
+
+      // 动画
+      if (animate) {
+        const text = objectToKeyframesCss(animate.keyframes, animate.name)
+        css += `${text}\n`
       }
     }
   }
