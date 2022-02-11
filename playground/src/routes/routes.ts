@@ -35,6 +35,7 @@ import Outline from '@/views/Outline.vue'
 import Cursor from '@/views/Cursor.vue'
 import Appearance from '@/views/Appearance.vue'
 import UserSelect from '@/views/UserSelect.vue'
+import Transition from '@/views/Transition.vue'
 
 export const routes = [
   {
@@ -184,5 +185,9 @@ export const routes = [
   {
     path: '/UserSelect',
     component: UserSelect,
+  },
+  {
+    path: '/Transition',
+    component: Transition,
   },
 ]

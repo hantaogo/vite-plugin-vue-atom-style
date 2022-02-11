@@ -41,6 +41,7 @@ import outline from './outline'
 import cursor from './cursor'
 import appearance from './appearance'
 import userSelect from './userSelect'
+import transition from './transition'
 
 export default [
   flex,
@@ -86,4 +87,5 @@ export default [
   cursor,
   appearance,
   userSelect,
+  transition,
 ]
