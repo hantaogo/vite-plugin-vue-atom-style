@@ -29,6 +29,7 @@ import borderColor from './borderColor'
 import borderStyle from './borderStyle'
 import ring from './ring'
 import grid from './grid'
+import boxAlignment from './boxAlignment'
 
 export default [
   flex,
@@ -62,4 +63,5 @@ export default [
   borderStyle,
   ring,
   grid,
+  boxAlignment,
 ]

@@ -17,6 +17,10 @@ import BorderColor from '@/views/BorderColor.vue'
 import BorderStyle from '@/views/BorderStyle.vue'
 import Ring from '@/views/Ring.vue'
 import Grid from '@/views/Grid.vue'
+import JustifyContent from '@/views/JustifyContent.vue'
+import AlignItems from '@/views/AlignItems.vue'
+import AlignContent from '@/views/AlignContent.vue'
+import AlignSelf from '@/views/AlignSelf.vue'
 
 export const routes = [
   {
@@ -94,5 +98,21 @@ export const routes = [
   {
     path: '/Grid',
     component: Grid,
+  },
+  {
+    path: '/JustifyContent',
+    component: JustifyContent,
+  },
+  {
+    path: '/AlignItems',
+    component: AlignItems,
+  },
+  {
+    path: '/AlignContent',
+    component: AlignContent,
+  },
+  {
+    path: '/AlignSelf',
+    component: AlignSelf,
   },
 ]
