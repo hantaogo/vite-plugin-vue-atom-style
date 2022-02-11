@@ -39,6 +39,7 @@ import visibility from './visibility'
 import overflow from './overflow'
 import outline from './outline'
 import cursor from './cursor'
+import appearance from './appearance'
 
 export default [
   flex,
@@ -82,4 +83,5 @@ export default [
   overflow,
   outline,
   cursor,
+  appearance,
 ]

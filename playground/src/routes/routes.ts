@@ -33,6 +33,7 @@ import Shadow from '@/views/Shadow.vue'
 import Opacity from '@/views/Opacity.vue'
 import Outline from '@/views/Outline.vue'
 import Cursor from '@/views/Cursor.vue'
+import Appearance from '@/views/Appearance.vue'
 
 export const routes = [
   {
@@ -174,5 +175,9 @@ export const routes = [
   {
     path: '/Cursor',
     component: Cursor,
+  },
+  {
+    path: '/Appearance',
+    component: Appearance,
   },
 ]
