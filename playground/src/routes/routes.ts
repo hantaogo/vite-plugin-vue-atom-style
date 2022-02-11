@@ -34,6 +34,7 @@ import Opacity from '@/views/Opacity.vue'
 import Outline from '@/views/Outline.vue'
 import Cursor from '@/views/Cursor.vue'
 import Appearance from '@/views/Appearance.vue'
+import UserSelect from '@/views/UserSelect.vue'
 
 export const routes = [
   {
@@ -179,5 +180,9 @@ export const routes = [
   {
     path: '/Appearance',
     component: Appearance,
+  },
+  {
+    path: '/UserSelect',
+    component: UserSelect,
   },
 ]

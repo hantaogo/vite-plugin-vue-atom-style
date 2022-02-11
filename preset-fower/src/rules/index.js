@@ -40,6 +40,7 @@ import overflow from './overflow'
 import outline from './outline'
 import cursor from './cursor'
 import appearance from './appearance'
+import userSelect from './userSelect'
 
 export default [
   flex,
@@ -84,4 +85,5 @@ export default [
   outline,
   cursor,
   appearance,
+  userSelect,
 ]
