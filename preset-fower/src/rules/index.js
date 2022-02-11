@@ -32,6 +32,7 @@ import grid from './grid'
 import boxAlignment from './boxAlignment'
 import display from './display'
 import position from './position'
+import topRightBottomLeft from './topRightBottomLeft'
 
 export default [
   flex,
@@ -68,4 +69,5 @@ export default [
   boxAlignment,
   display,
   position,
+  topRightBottomLeft,
 ]

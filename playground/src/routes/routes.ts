@@ -24,6 +24,7 @@ import AlignSelf from '@/views/AlignSelf.vue'
 import BoxSizing from '@/views/BoxSizing.vue'
 import Display from '@/views/Display.vue'
 import Position from '@/views/Position.vue'
+import TopRightBottomLeft from '@/views/TopRightBottomLeft.vue'
 
 export const routes = [
   {
@@ -129,5 +130,9 @@ export const routes = [
   {
     path: '/Position',
     component: Position,
+  },
+  {
+    path: '/TopRightBottomLeft',
+    component: TopRightBottomLeft,
   },
 ]
