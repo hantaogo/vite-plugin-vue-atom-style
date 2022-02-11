@@ -2,12 +2,6 @@ const gapRegex = /(gap|rowgap|columngap)\-(\d+)/i
 const columnRegex = /gridtemplatecolumns\-(\d+)/i
 
 const getStyle = (k, config) => {
-  // grid
-  if (k === 'grid') {
-    return {
-      display: 'grid',
-    }
-  }
   // gap|rowgap|columngap
   const gapResult = k.match(gapRegex)
   if (Array.isArray(gapResult) && gapResult.length >= 3) {
@@ -35,7 +29,6 @@ const getStyle = (k, config) => {
 /**
  * 格子
  * 
- * grid display: grid;
  * gridTemplateColumns-{value}	grid-template-columns: repeat({value}, minmax(0px, 1fr));
  */
 export default {

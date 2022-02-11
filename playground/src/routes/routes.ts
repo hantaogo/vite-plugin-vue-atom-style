@@ -22,6 +22,7 @@ import AlignItems from '@/views/AlignItems.vue'
 import AlignContent from '@/views/AlignContent.vue'
 import AlignSelf from '@/views/AlignSelf.vue'
 import BoxSizing from '@/views/BoxSizing.vue'
+import Display from '@/views/Display.vue'
 
 export const routes = [
   {
@@ -119,5 +120,9 @@ export const routes = [
   {
     path: '/BoxSizing',
     component: BoxSizing,
-  }
+  },
+  {
+    path: '/Display',
+    component: Display,
+  },
 ]
