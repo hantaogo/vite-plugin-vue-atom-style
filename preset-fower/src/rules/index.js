@@ -31,6 +31,7 @@ import ring from './ring'
 import grid from './grid'
 import boxAlignment from './boxAlignment'
 import display from './display'
+import position from './position'
 
 export default [
   flex,
@@ -66,4 +67,5 @@ export default [
   grid,
   boxAlignment,
   display,
+  position,
 ]
