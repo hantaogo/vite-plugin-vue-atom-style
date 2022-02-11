@@ -1,11 +1,26 @@
+/**
+ * opacity
+ * 
+ * opacity-{value} opacity: {value}
+ */
+
+ const getStyle = (k, config) => {
+  const str = `opacity${config.vs}`
+  if (k.startsWith(str)) {
+    const z = Number.parseInt(k.replace(str, ''))
+    if (!Number.isNaN(z)) {
+      return {
+        'opacity': z / 100,
+      }
+    }
+  }
+}
+
 export default {
   match: (k, config) => {
-    return /^opacity\d+$/.test(k)
+    return getStyle(k, config)
   },
   translate: (k, config) => {
-    const size = Number.parseInt(k.replace('opacity', ''))
-    return {
-      opacity: size / 100,
-    }
+    return getStyle(k, config)
   }
 }

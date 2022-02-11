@@ -29,6 +29,7 @@ import ZIndex from '@/views/ZIndex.vue'
 import Visibility from '@/views/Visibility.vue'
 import Overflow from '@/views/Overflow.vue'
 import Shadow from '@/views/Shadow.vue'
+import Opacity from '@/views/Opacity.vue'
 
 export const routes = [
   {
@@ -154,5 +155,9 @@ export const routes = [
   {
     path: '/Shadow',
     component: Shadow,
+  },
+  {
+    path: '/Opacity',
+    component: Opacity,
   },
 ]
