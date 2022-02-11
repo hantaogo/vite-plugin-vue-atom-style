@@ -18,7 +18,7 @@ const parse = (k, config) => {
     if (!Number.isNaN(size)) {
       return {
         selector,
-        'margin-right': `${size * config.sizeUnit}${config.unit}`
+        'margin-right': `${size * config.unitSize}${config.unit}`
       }
     }
   } else if (k.startsWith(`spacey-`)) {
@@ -40,7 +40,7 @@ const parse = (k, config) => {
     }
     return {
       selector,
-      'margin-bottom': `${size * config.sizeUnit}${config.unit}`
+      'margin-bottom': `${size * config.unitSize}${config.unit}`
     }
   } else if (k.startsWith(`space-`)) {
     // space10 间距 10
@@ -62,8 +62,8 @@ const parse = (k, config) => {
     }
     return {
       selector,
-      'margin-right': `${size * config.sizeUnit}${config.unit}`,
-      'margin-bottom': `${size* config.sizeUnit}${config.unit}`
+      'margin-right': `${size * config.unitSize}${config.unit}`,
+      'margin-bottom': `${size* config.unitSize}${config.unit}`
     }
   }
 }

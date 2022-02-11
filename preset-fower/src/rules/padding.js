@@ -31,7 +31,7 @@ const getPadding = (k, config) => {
   if (!styleNames) {
     return
   }
-  return { styleNames, value : sep ? value : value * config.sizeUnit }
+  return { styleNames, value : sep ? value : value * config.unitSize }
 }
 
 export default {

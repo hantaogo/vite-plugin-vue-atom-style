@@ -25,7 +25,7 @@ const getStyle = (k, config) => {
     const [_, side, sep, value] = result
     let num = Number.parseInt(value)
     if (!Number.isNaN(num)) {
-      const size = `${sep ? num : num * config.sizeUnit}${config.unit}`
+      const size = `${sep ? num : num * config.unitSize}${config.unit}`
       if (side) {
         const obj = {
           'border-top-width': '0',

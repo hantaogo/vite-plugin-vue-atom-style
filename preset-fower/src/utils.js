@@ -21,7 +21,7 @@
  * defaultUnit = undefined
  * 15 = 15
  */
-export const parseSize = (str, defaultUnit) => {
+export const parseSize = (str, defaultUnit = '', unitSize = 1) => {
   const result = str.match(/^(n?)(\d+)(.*)$/i)
   if (Array.isArray(result) && result.length >= 4) {
     let [_, negative, value, unit] = result
@@ -30,7 +30,10 @@ export const parseSize = (str, defaultUnit) => {
     }
     const num = Number.parseInt(value)
     if (!Number.isNaN(num)) {
-      return `${negative ? '-' : ''}${num}${unit || defaultUnit || ''}`
+      const i = unit ? 1 : (unitSize || 1)
+      const text = `${negative ? '-' : ''}${num * i}${unit || defaultUnit || ''}`
+      console.log('parseSize', str, defaultUnit, unitSize, ' => ', text)
+      return text
     }
   }
 }

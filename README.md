@@ -60,9 +60,9 @@ const green = ref(true)
 ```js
 {
   config: { // 自定义配置
-    unit: 'rpx', // 尺寸单位
     markSeperator: '|', // 标记分隔符
-    sizeUnit: 8, // 某些无单位的数值使用的尺寸系数
+    unit: 'rpx', // 尺寸单位
+    unitSize: 8, // 某些无单位的数值使用的尺寸系数
     theme: { // 主题
       colors: {
         transparent: 'transparent',

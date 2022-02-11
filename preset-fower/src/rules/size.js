@@ -1,3 +1,5 @@
+import { parseSize } from '../utils'
+
 const namesMap = {
   w: ['width'],
   h: ['height'],
@@ -9,33 +11,35 @@ const namesMap = {
   maxh: ['max-height'],
 }
 
+const regex = /^([wh]|square|circle|min[hw]|max[hw])(\-?)(.+)$/i
+
 const parse = (k, config) => {
-  const exp = `^([wh]|square|circle|min[hw]|max[hw])(\-?)(\\d+)$`
-  const regex = new RegExp(exp, 'i')
   const result = k.match(regex)
   // result形如：null 或 ['square100', 'square', '100', ...]
-  if (!Array.isArray(result) || result.length < 4) {
-    return
+  if (Array.isArray(result) && result.length >= 4) {
+    const [_, key, sep, value] = result
+    if (namesMap[key]) {
+      const size = parseSize(value, config.unit, sep ? 1 : config.unitSize)
+      if (size) {
+        return { names: namesMap[key], size }
+      }
+    }
   }
-  const key = result[1]
-  const sep = result[2]
-  const value = parseInt(result[3])
-  if (Number.isNaN(value)) {
-    return
-  }
-  return { names: namesMap[key], value: sep ? value : value * config.sizeUnit }
 }
 
 export default {
   match: (k, config) => {
-    return !!parse(k, config)
+    return regex.test(k)
   },
   translate: (k, config) => {
-    const { names, value } = parse(k, config)
-    const style = {}
-    for (const name of names) {
-      style[name] = `${value}${config.unit}`
+    const result = parse(k, config)
+    if (result) {
+      const { names, size } = result
+      const style = {}
+      for (const name of names) {
+        style[name] = size
+      }
+      return style
     }
-    return style
   }
 }

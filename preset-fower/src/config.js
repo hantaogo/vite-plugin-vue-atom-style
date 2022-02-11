@@ -3,7 +3,7 @@ import { colors } from './colors'
 export default {
   unit: 'px',
   markSeperator: '--',
-  sizeUnit: 4,
+  unitSize: 4,
   theme: {
     colors,
     fontSizes: {

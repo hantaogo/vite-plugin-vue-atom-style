@@ -25,7 +25,6 @@ const getStyle = (k, config) => {
       }
     } else if (key === 'translate') {
       const [x, y] = value.split('-')
-      console.log('x, y', x, y)
       if (x && y) {
         const sizeX = parseSize(x, config.unit)
         const sizeY = parseSize(y, config.unit)
