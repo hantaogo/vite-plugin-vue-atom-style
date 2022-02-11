@@ -33,6 +33,7 @@ import boxAlignment from './boxAlignment'
 import display from './display'
 import position from './position'
 import topRightBottomLeft from './topRightBottomLeft'
+import zIndex from './zIndex'
 
 export default [
   flex,
@@ -70,4 +71,5 @@ export default [
   display,
   position,
   topRightBottomLeft,
+  zIndex,
 ]

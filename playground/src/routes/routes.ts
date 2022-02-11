@@ -25,6 +25,7 @@ import BoxSizing from '@/views/BoxSizing.vue'
 import Display from '@/views/Display.vue'
 import Position from '@/views/Position.vue'
 import TopRightBottomLeft from '@/views/TopRightBottomLeft.vue'
+import ZIndex from '@/views/ZIndex.vue'
 
 export const routes = [
   {
@@ -134,5 +135,9 @@ export const routes = [
   {
     path: '/TopRightBottomLeft',
     component: TopRightBottomLeft,
+  },
+  {
+    path: '/ZIndex',
+    component: ZIndex,
   },
 ]
