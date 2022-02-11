@@ -28,6 +28,7 @@ import TopRightBottomLeft from '@/views/TopRightBottomLeft.vue'
 import ZIndex from '@/views/ZIndex.vue'
 import Visibility from '@/views/Visibility.vue'
 import Overflow from '@/views/Overflow.vue'
+import Shadow from '@/views/Shadow.vue'
 
 export const routes = [
   {
@@ -149,5 +150,9 @@ export const routes = [
   {
     path: '/Overflow',
     component: Overflow,
+  },
+  {
+    path: '/Shadow',
+    component: Shadow,
   },
 ]

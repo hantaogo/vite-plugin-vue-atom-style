@@ -2,7 +2,10 @@ const getShadow = (k, config) => {
   if (!k.startsWith('shadow')) {
     return
   }
-  const type = k.replace('shadow', '')
+  let type = k.replace('shadow', '')
+  if (!type) {
+    type = 'base'
+  }
   return config.theme.shadows[type]
 }
 
