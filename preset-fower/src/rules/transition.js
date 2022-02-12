@@ -1,4 +1,6 @@
 /**
+ * Transition Property
+ * 
  * transitionNone	transition-property: none;
  * transitionAll	transition-property: all;
  * transitionCommon	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
