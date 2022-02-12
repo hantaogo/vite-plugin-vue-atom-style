@@ -1,27 +1,23 @@
-const getFontSize = (k, config) => {
-  // text-{value} font-size: {value};
-  if (k.startsWith(`text-`)) {
-    const [_, value] = k.split('-')
-    const size = Number.parseInt(value)
-    if (Number.isNaN(size)) {
-      return
-    }
-    return size
-  } else if (k.startsWith('text')) {
-    // text2XL
-    const size = k.replace('text', '')
-    return config.theme.fontSizes[size]
-  }
-}
+import { parseSize } from '../utils'
 
 export default {
   match: (k, config) => {
-    return !!getFontSize(k, config)
+    return /text.+/i.test(k)
   },
   translate: (k, config) => {
-    const fontSize = getFontSize(k, config)
-    return {
-      'font-size': `${fontSize}${config.unit}`
+    const type = k.replace('text', '').replace('-', '')
+    const p = config.theme.fontSizes[type]
+    if (p) {
+      return {
+        'font-size': `${p}${config.unit}`
+      }
+    } else {
+      const size = parseSize(type, config.unit)
+      if (size) {
+        return {
+          'font-size': size
+        }
+      }
     }
   }
 }

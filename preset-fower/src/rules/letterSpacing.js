@@ -2,18 +2,17 @@ import { parseSize } from '../utils'
 
 export default {
   match: (k, config) => {
-    return /letter.+/.test(k)
+    return /letter.+/i.test(k)
   },
   translate: (k, config) => {
-    const type = k.replace('letter', '')
+    const type = k.replace('letter', '').replace('-', '')
     const p = config.theme.letterSpacings[type]
     if (p) {
       return {
         'letter-spacing': `${p}${config.unit}`
       }
     } else {
-      const str = type.replace('-', '')
-      const size = parseSize(str, config.unit)
+      const size = parseSize(type, config.unit)
       if (size) {
         return {
           'letter-spacing': size

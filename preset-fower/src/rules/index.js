@@ -4,6 +4,7 @@ import flexDirection from './flexDirection'
 import flexWrap from './flexWrap'
 import flexGrow from './flexGrow'
 import flexShrink from './flexShrink'
+import fontFamily from './fontFamily'
 import fontSize from './fontSize'
 import fontStyle from './fontStyle'
 import fontWeight from './fontWeight'
@@ -57,6 +58,7 @@ export default [
   flexWrap,
   flexGrow,
   flexShrink,
+  fontFamily,
   fontSize,
   fontStyle,
   fontWeight,

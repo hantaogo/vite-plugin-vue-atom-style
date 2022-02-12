@@ -20,6 +20,8 @@ import PlaceholderColor from '@/views/PlaceholderColor.vue'
 import TextAlignment from '@/views/TextAlignment.vue'
 import TextDecoration from '@/views/TextDecoration.vue'
 import TextTransform from '@/views/TextTransform.vue'
+import FontFamily from '@/views/FontFamily.vue'
+import FontSize from '@/views/FontSize.vue'
 import BackgroundClip from '@/views/BackgroundClip.vue'
 import Gradient from '@/views/Gradient.vue'
 import BorderRadius from '@/views/BorderRadius.vue'
@@ -141,6 +143,14 @@ export const routes = [
   {
     path: '/TextTransform',
     component: TextTransform,
+  },
+  {
+    path: '/FontFamily',
+    component: FontFamily,
+  },
+  {
+    path: '/FontSize',
+    component: FontSize,
   },
   {
     path: '/BackgroundClip',
