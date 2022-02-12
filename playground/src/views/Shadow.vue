@@ -1,22 +1,22 @@
 <template>
   <div class="row spaceX-20 bgGray100 p-20 textXs">
-    <div class="toCenter square-80 bgWhite shadowSm">
-      shadowSM
+    <div class="toCenter square-80 bgWhite shadowTiny">
+      shadowTiny
     </div>
-    <div class="toCenter square-90 bgWhite shadowBase">
-      shadowBase
+    <div class="toCenter square-90 bgWhite shadowSmall">
+      shadowSmall
     </div>
-    <div class="toCenter square-100 bgWhite bgWhite shadowMd">
-      shadowMD
+    <div class="toCenter square-100 bgWhite bgWhite shadowMedium">
+      shadowMedium
     </div>
-    <div class="toCenter square-110 bgWhite shadowLg">
-      shadowLG
+    <div class="toCenter square-110 bgWhite shadowLarge">
+      shadowLarge
     </div>
-    <div class="toCenter square-120 bgWhite shadowXL">
-      shadowXL
+    <div class="toCenter square-120 bgWhite shadowHuge">
+      shadowHuge
     </div>
-    <div class="toCenter square-130 bgWhite shadow2XL">
-      shadow2XL
+    <div class="toCenter square-130 bgWhite shadowGigantic">
+      shadowGigantic
     </div>
     <div class="toCenter square-100 bgWhite shadowInner">
       shadowInner
