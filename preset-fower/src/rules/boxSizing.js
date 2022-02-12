@@ -17,6 +17,7 @@ const data = {
 }
 
 export default {
+  name: 'boxSizing',
   match: (k, config) => {
     return !!data[k]
   },

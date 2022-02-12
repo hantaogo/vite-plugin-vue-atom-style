@@ -5,6 +5,7 @@ const key = 'flexgrow'
  * flexGrow-{value}
  */
 export default {
+  name: 'flexGrow',
   match: (k, config) => {
     if (k.startsWith(`${key}-`)) {
       return true

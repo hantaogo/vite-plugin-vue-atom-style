@@ -18,6 +18,7 @@ const getStyle = (k, config) => {
 }
 
 export default {
+  name: 'animate',
   match: (k, config) => {
     return getStyle(k, config)
   },

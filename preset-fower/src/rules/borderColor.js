@@ -11,6 +11,7 @@ const getColor = (k, config) => {
 }
 
 export default {
+  name: 'borderColor',
   match: (k, config) => {
     return !!getColor(k, config)
   },

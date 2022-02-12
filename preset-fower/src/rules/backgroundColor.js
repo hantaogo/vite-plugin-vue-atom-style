@@ -18,6 +18,7 @@ const getColor = (k, config) => {
 }
 
 export default {
+  name: 'backgroundColor',
   match: (k, config) => {
     return /^(bg|bgcolor).+$/i.test(k)
   },

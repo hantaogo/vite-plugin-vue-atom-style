@@ -19,6 +19,7 @@ const data = {
  * bgClipBorder | bgClipPadding | bgClipContent | bgClipText
  */
 export default {
+  name: 'backgroundClip',
   match: (k, config) => {
     return !!data[k]
   },

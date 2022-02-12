@@ -8,6 +8,7 @@ const regex = /^(row|column|flexdirection-.+)$/i
  * flexDirection
  */
 export default {
+  name: 'flexDirection',
   match: (k, config) => {
     return regex.test(k)
   },

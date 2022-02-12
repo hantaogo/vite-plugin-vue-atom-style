@@ -32,6 +32,7 @@ const getStyle = (k, config) => {
  * textAlign-{value} | textLeft | textCenter | textRight | textJustify | textAlign
  */
 export default {
+  name: 'textAlignment',
   match: (k, config) => {
     return getStyle(k, config)
   },

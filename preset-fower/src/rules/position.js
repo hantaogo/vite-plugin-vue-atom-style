@@ -27,6 +27,7 @@ const getStyle = (k, config) => {
  * position-{value} | static | fixed | absolute | relative | sticky
  */
 export default {
+  name: 'position',
   match: (k, config) => {
     return getStyle(k, config)
   },

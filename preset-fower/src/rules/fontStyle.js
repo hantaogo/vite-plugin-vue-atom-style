@@ -8,6 +8,7 @@ const data = {
 }
 
 export default {
+  name: 'fontStyle',
   match: (k, config) => {
     return !!data[k]
   },

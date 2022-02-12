@@ -15,8 +15,8 @@ const getStyle = (k, config) => {
     return {
       [styleName]: data[k],
     }
-  } else if (k.startsWith(`display-`)) {
-    const value = k.replace(`display-`, '')
+  } else if (k.startsWith(styleName)) {
+    const value = k.replace(styleName, '').replace('-', '')
     if (value) {
       return {
         [styleName]: value
@@ -29,6 +29,7 @@ const getStyle = (k, config) => {
  * display-{value} | block | inline | inlineBlock | flex | inlineFlex | grid | hidden
  */
 export default {
+  name: 'display',
   match: (k, config) => {
     return getStyle(k, config)
   },

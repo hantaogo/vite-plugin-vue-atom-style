@@ -1,4 +1,4 @@
-const regex = /^overflow(x|y)?-(.+)$/i
+const regex = /^overflow([xy]?)-(.+)$/i
 
 const getStyle = (k, config) => {
   const result = k.match(regex)
@@ -20,6 +20,7 @@ const getStyle = (k, config) => {
  * overflowY-{value}	overflow-y:{value}
  */
 export default {
+  name: 'overflow',
   match: (k, config) => {
     return getStyle(k, config)
   },

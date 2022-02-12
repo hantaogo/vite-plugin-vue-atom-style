@@ -5,6 +5,7 @@ const key = 'flexwrap'
  * flexWrap-{value}
  */
 export default {
+  name: 'flexWrap',
   match: (k, config) => {
     if (k.startsWith(`${key}-`)) {
       return true

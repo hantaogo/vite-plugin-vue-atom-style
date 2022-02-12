@@ -26,6 +26,7 @@ const getStyle = (k, config) => {
  * top-20p top: -20%;
  */
 export default {
+  name: 'topRightBottomLeft',
   match: (k, config) => {
     return getStyle(k, config)
   },

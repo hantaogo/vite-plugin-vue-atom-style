@@ -5,6 +5,7 @@ const key = 'flexshrink'
  * flexShrink-{value}
  */
 export default {
+  name: 'flexShrink',
   match: (k, config) => {
     if (k.startsWith(`${key}-`)) {
       return true

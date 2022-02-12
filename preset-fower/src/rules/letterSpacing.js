@@ -1,6 +1,7 @@
 import { parseSize } from '../utils'
 
 export default {
+  name: 'letterSpacing',
   match: (k, config) => {
     return /letter.+/i.test(k)
   },

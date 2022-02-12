@@ -18,6 +18,7 @@ const getColor = (k, config) => {
 }
 
 export default {
+  name: 'placeholderColor',
   match: (k, config) => {
     return getColor(k, config)
   },

@@ -23,6 +23,7 @@ const getStyle = (k, config) => {
 }
 
 export default {
+  name: 'ease',
   match: (k, config) => {
     return getStyle(k, config)
   },

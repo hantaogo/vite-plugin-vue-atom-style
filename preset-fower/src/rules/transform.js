@@ -70,6 +70,7 @@ const getStyle = (k, config) => {
  * transform
  */
 export default {
+  name: 'transform',
   match: (k, config) => {
     return getStyle(k, config)
   },

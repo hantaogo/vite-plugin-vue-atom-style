@@ -16,6 +16,7 @@ const data = {
  * underline | lineThrough | noUnderline
  */
 export default {
+  name: 'textDecoration',
   match: (k, config) => {
     return !!data[k]
   },

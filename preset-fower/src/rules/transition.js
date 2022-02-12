@@ -27,6 +27,7 @@ const getStyle = (k, config) => {
 }
 
 export default {
+  name: 'transition',
   match: (k, config) => {
     return getStyle(k, config)
   },

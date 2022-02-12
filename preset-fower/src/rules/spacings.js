@@ -24,6 +24,7 @@ const parse = (k, config) => {
 }
 
 export default {
+  name: 'spacings',
   match: (k, config) => {
     return regex.test(k)
   },

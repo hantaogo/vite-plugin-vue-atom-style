@@ -36,6 +36,7 @@ const getStyle = (k, config) => {
 }
 
 export default {
+  name: 'padding',
   match: (k, config) => {
     return regex.test(k)
   },

@@ -55,6 +55,7 @@ const getStyle = (k, config) => {
  * cursor
  */
 export default {
+  name: 'cursor',
   match: (k, config) => {
     return getStyle(k, config)
   },

@@ -33,6 +33,7 @@ const getStyle = (k, config) => {
  * bgGradientX-red400-yellow400 | bgGradientY-purple500-pink500-red500
  */
 export default {
+  name: 'gradient',
   match: (k, config) => {
     return getStyle(k, config)
   },

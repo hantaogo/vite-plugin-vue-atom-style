@@ -17,6 +17,7 @@
 }
 
 export default {
+  name: 'opacity',
   match: (k, config) => {
     return getStyle(k, config)
   },

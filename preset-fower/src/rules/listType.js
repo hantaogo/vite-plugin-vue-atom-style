@@ -13,6 +13,7 @@ const data = {
 }
 
 export default {
+  name: 'listType',
   match: (k, config) => {
     return data[k]
   },

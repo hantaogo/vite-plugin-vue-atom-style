@@ -13,6 +13,7 @@ const regex = /^gridtemplatecolumns-?(\d+)$/i
  * gridTemplateColumns-{value}	grid-template-columns: repeat({value}, minmax(0px, 1fr));
  */
 export default {
+  name: 'gridTemplateColumns',
   match: (k, config) => {
     return regex.test(k)
   },

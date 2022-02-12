@@ -13,6 +13,7 @@ const data = {
  * visible | invisible
  */
 export default {
+  name: 'visibility',
   match: (k, config) => {
     return !!data[k]
   },

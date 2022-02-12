@@ -1,6 +1,7 @@
 import { parseSize } from '../utils'
 
 export default {
+  name: 'fontSize',
   match: (k, config) => {
     return /text.+/i.test(k)
   },

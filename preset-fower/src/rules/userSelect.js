@@ -21,6 +21,7 @@ const getStyle = (k, config) => {
 }
 
 export default {
+  name: 'userSelect',
   match: (k, config) => {
     return getStyle(k, config)
   },

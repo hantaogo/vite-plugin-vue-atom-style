@@ -1,4 +1,5 @@
 export default {
+  name: 'fontFamily',
   match: (k, config) => {
     return /font.+/i.test(k)
   },

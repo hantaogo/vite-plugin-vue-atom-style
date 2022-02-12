@@ -10,6 +10,7 @@ const getShadow = (k, config) => {
 }
 
 export default {
+  name: 'shadow',
   match: (k, config) => {
     return !!getShadow(k, config)
   },

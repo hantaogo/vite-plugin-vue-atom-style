@@ -15,6 +15,7 @@ const data = {
  * border{Top,Right,Bottom,Left}-{value}	border-{side}-width: {value};
  */
 export default {
+  name: 'borderStyle',
   match: (k, config) => {
     return !!data[k]
   },

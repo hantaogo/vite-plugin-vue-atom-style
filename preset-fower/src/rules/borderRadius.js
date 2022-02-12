@@ -48,6 +48,7 @@ const regex = /^rounded.+$/i
  * 圆角
  */
 export default {
+  name: 'borderRadius',
   match: (k, config) => {
     return regex.test(k)
   },

@@ -19,6 +19,7 @@ const data = {
  * uppercase | lowercase | capitalize | normalcase
  */
 export default {
+  name: 'textTransform',
   match: (k, config) => {
     return !!data[k]
   },

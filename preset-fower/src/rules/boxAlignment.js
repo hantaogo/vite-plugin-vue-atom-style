@@ -42,6 +42,7 @@ const getStyle = (k, config) => {
 }
 
 export default {
+  name: 'boxAlignment',
   match: (k, config) => {
     return regex.test(k)
   },

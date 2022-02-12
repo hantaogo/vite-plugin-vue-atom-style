@@ -7,6 +7,7 @@ const getFontWeight = (k, config) => {
 }
 
 export default {
+  name: 'fontWeight',
   match: (k, config) => {
     return !!getFontWeight(k, config)
   },

@@ -8,6 +8,7 @@ const data = {
  * appearanceNone
  */
 export default {
+  name: 'appearance',
   match: (k, config) => {
     return !!data[k]
   },

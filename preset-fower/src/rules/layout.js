@@ -173,6 +173,7 @@ const getStyle = (k, config, classNames) => {
 }
 
 export default {
+  name: 'layout',
   match: (k, config) => {
     return !!keys[k]
   },

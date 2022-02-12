@@ -1,8 +1,9 @@
 import { parseSize } from '../utils'
 
 export default {
+  name: 'lineHeight',
   match: (k, config) => {
-    return /line.+/i.test(k)
+    return /^line.+$/i.test(k)
   },
   translate: (k, config) => {
     const type = k.replace('line', '').replace('-', '')

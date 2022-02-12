@@ -1,5 +1,6 @@
+const regex = /^(gap|rowgap|columngap)-?(\d+)$/i
+
 const getStyle = (k, config) => {
-  const regex = /^(gap|rowgap|columngap)\-(\d+)$/i
   const result = k.match(regex)
   if (Array.isArray(result) && result.length >= 3) {
     const [_, type, value] = result
@@ -25,8 +26,9 @@ const getStyle = (k, config) => {
  * columnGap-{value}	column-gap: {value};
  */
 export default {
+  name: 'gap',
   match: (k, config) => {
-    return getStyle(k, config)
+    return regex.test(k)
   },
   translate: (k, config) => {
     return getStyle(k, config)

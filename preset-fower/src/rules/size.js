@@ -11,7 +11,7 @@ const namesMap = {
   maxh: ['max-height'],
 }
 
-const regex = /^([wh]|square|circle|min[hw]|max[hw])(\-?)(.+)$/i
+const regex = /^([wh]|square|circle|min[hw]|max[hw])(\-?)(\d+)$/i
 
 const parse = (k, config) => {
   const result = k.match(regex)
@@ -28,6 +28,7 @@ const parse = (k, config) => {
 }
 
 export default {
+  name: 'size',
   match: (k, config) => {
     return regex.test(k)
   },

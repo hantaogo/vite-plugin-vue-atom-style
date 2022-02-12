@@ -23,6 +23,7 @@ const getStyle = (k, config) => {
  * ring{Color}-{width}	box-shadow: 0 0 0 ${width}px ${Color}
  */
 export default {
+  name: 'ring',
   match: (k, config) => {
     return getStyle(k, config)
   },

@@ -15,6 +15,7 @@ const getColor = (k, config) => {
  * blue500 color: #339af0
  */
 export default {
+  name: 'color',
   match: (k, config) => {
     return getColor(k, config)
   },

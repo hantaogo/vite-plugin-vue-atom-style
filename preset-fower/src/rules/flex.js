@@ -18,6 +18,7 @@ const data = {
  * flex-1-2-auto flex: 1-2-auto;
  */
 export default {
+  name: 'flex',
   match: (k, config) => {
     if (data[k]) {
       return true

@@ -51,6 +51,7 @@ const getStyle = (k, config) => {
  * border{Top,Right,Bottom,Left}-{value}	border-{side}-width: {value};
  */
 export default {
+  name: 'borderWidth',
   match: (k, config) => {
     return getStyle(k, config)
   },
