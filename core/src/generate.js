@@ -28,7 +28,7 @@ export const generate = (code, options) => {
       }
 
       // 生成css
-      const { prefix, selector, pseudo, animate, ...style } = obj
+      const { media, prefix, selector, pseudo, animate, ...style } = obj
 
       // 样式代码
       let styleString = ''
@@ -37,18 +37,29 @@ export const generate = (code, options) => {
         styleString += `${k}: ${v}; `
       }
 
+      // 样式文本
+      let text = ''
+
       // 支持多个伪类
       const pseudos = Array.isArray(pseudo) ? pseudo : [pseudo || '']
       for (const p of pseudos) {
-        css += (prefix || '') + `.${className}` + (p || '') + (selector ? ` ${selector}` : '') + ` { ${styleString}}\n`
+        text += (prefix || '') + `.${className}` + (p || '') + (selector ? ` ${selector} ` : '') + `{ ${styleString}}\n`
       }
 
       // 动画
       if (animate) {
-        const text = objectToKeyframesCss(animate.keyframes, animate.name)
-        css += `${text}\n`
+        const keyframes = objectToKeyframesCss(animate.keyframes, animate.name)
+        text += `${keyframes}\n`
+      }
+
+      // 媒体查询
+      if (media) {
+        css += `@media (${media}) {\n${text}}\n`
+      } else {
+        css += text
       }
     }
   }
+  console.log('css', css)
   return css
 }

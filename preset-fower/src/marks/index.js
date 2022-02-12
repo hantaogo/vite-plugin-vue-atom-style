@@ -4,6 +4,7 @@ import checked from './checked'
 import visited from './visited'
 import hover from './hover'
 import color from './color'
+import breakpoints from './breakpoints'
 
 export default [
   active,
@@ -12,4 +13,5 @@ export default [
   visited,
   hover,
   color,
+  breakpoints,
 ]
