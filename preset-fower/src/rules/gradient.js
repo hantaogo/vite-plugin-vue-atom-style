@@ -1,7 +1,22 @@
 const styleName = 'background-image'
 
-const getColors = (k, config) => {
-  const [_, ...colors] = k.split('-')
+const regex = /^bggradient[xy](.+)$/i
+
+const getStyle = (k, config) => {
+  const result = k.match(regex)
+  if (Array.isArray(result) && result.length === 2) {
+    const colors = getColors(result[1], config)
+    if (Array.isArray(colors) && colors.length >= 2) {
+      const value = colors.join(', ')
+      return {
+        [styleName]: `linear-gradient(to right, ${value})`
+      }
+    }
+  }
+}
+
+const getColors = (colorsStr, config) => {
+  const [_, ...colors] = colorsStr.split('-')
   if (Array.isArray(colors) && colors.length >= 2) {
     const hexs = colors.map(t => config.theme.colors[t]).filter(t => t)
     if (hexs.length >= 2) {
@@ -10,32 +25,15 @@ const getColors = (k, config) => {
   }
 }
 
-const getStyle = (k, config) => {
-  if (k.startsWith(`bggradientx-`)) {
-    const colors = getColors(k, config)
-    if (colors) {
-      return {
-        [styleName]: `linear-gradient(to right, ${colors.join(', ')})`
-      }
-    }
-  } else if (k.startsWith(`bggradienty-`)) {
-    const colors = getColors(k, config)
-    if (colors) {
-      return {
-        [styleName]: `linear-gradient(to bottom, ${colors.join(', ')})`
-      }
-    }
-  }
-}
-
 /**
  * 渐变色
+ * 颜色只支持config中的颜色，不支持 ff00ff，rgba等
  * bgGradientX-red400-yellow400 | bgGradientY-purple500-pink500-red500
  */
 export default {
   name: 'gradient',
   match: (k, config) => {
-    return getStyle(k, config)
+    return regex.test(k)
   },
   translate: (k, config) => {
     return getStyle(k, config)

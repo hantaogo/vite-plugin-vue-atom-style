@@ -1,31 +1,27 @@
-const key1 = 'bgcolor'
-const key2 = 'bg'
-const styleName = 'background-color'
+const regex = /^bg-?(.+)$/i
 
-const getColor = (k, config) => {
-  if (k.startsWith(key1)) {
-    const color = k.replace(key1, '').replace('-', '')
-    if (color) {
-      return `#${color}`
-    }
-  } else {
-    const colorName = k.replace(key2, '').replace('-', '')
-    const color = config.theme.colors[colorName]
-    if (color) {
-      return color
-    }
-  }
-}
-
+/**
+ * Background Color
+ * 
+ * bgRed500 | bgff0000 | bg-red500 | bg-ff0000
+ */
 export default {
   name: 'backgroundColor',
   match: (k, config) => {
-    return /^(bg|bgcolor).+$/i.test(k)
+    // 排除渐变色的
+    if (k.startsWith('bggradient')) {
+      return false
+    }
+    return regex.test(k)
   },
   translate: (k, config) => {
-    const color = getColor(k, config)
-    return {
-      [styleName]: color
+    const result = k.match(regex)
+    if (Array.isArray(result) && result.length >= 2) {
+      const key = result[1]
+      const color = config.theme.colors[key] || `#${key}`
+      return {
+        'background-color': color
+      }
     }
   }
 }

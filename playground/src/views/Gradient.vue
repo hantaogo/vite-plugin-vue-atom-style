@@ -1,4 +1,5 @@
 <template>
+  <h2>Gradient</h2>
   <div class="spaceY4">
     <div class="spaceX3">
       <div class="square20 rounded bgGradientX-red400-yellow400" />
