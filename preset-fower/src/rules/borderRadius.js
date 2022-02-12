@@ -4,16 +4,6 @@ const borderTopRightRadius = 'border-top-right-radius'
 const borderBottomRightRadius = 'border-bottom-right-radius'
 const borderBottomLeftRadius = 'border-bottom-left-radius'
 
-const borderRadiusSize = {
-  roundedfull: 9999,
-  roundedtiny: 2,
-  roundedsmall: 4,
-  roundedmedium: 6,
-  roundedlarge: 8,
-  roundedhuge: 12,
-  roundedgigantic: 16,
-}
-
 const typesMap = {
   rounded: [borderRadius],
   roundedtop: [borderTopLeftRadius, borderTopRightRadius],
@@ -27,15 +17,15 @@ const typesMap = {
 }
 
 const getStyle = (k, config) => {
-  if (k === 'roundednone') {
+  const type = k.replace('rounded', '')
+  const p = config.theme.radii[type]
+  if (p) {
+    // 预定义值
     return {
-      [borderRadius]: 'none'
-    }
-  } else if (borderRadiusSize[k]) {
-    return {
-      [borderRadius]: `${borderRadiusSize[k]}${config.unit}`
+      [borderRadius]: `${p}${config.unit}`
     }
   } else {
+    // 手动填写的值
     for (const key in typesMap) {
       if (k.startsWith(`${key}-`)) {
         const [_, value] = k.split('-')
@@ -57,7 +47,7 @@ const getStyle = (k, config) => {
  */
 export default {
   match: (k, config) => {
-    return getStyle(k, config)
+    return /^rounded.+$/.test(k)
   },
   translate: (k, config) => {
     return getStyle(k, config)
