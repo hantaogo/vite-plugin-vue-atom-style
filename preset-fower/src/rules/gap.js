@@ -1,19 +1,17 @@
-const regex = /^(gap|rowgap|columngap)-?(\d+)$/i
+const regex = /^(gap|rowgap|columngap)(-?)(\d+)$/i
 
 const getStyle = (k, config) => {
   const result = k.match(regex)
-  if (Array.isArray(result) && result.length >= 3) {
-    const [_, type, value] = result
-    let num = Number.parseInt(value)
-    if (!Number.isNaN(num)) {
-      const data = {
-        gap: 'gap',
-        rowgap: 'row-gap',
-        columngap: 'column-gap',
-      }
-      return {
-        [data[type]]: `${num}${config.unit}`
-      }
+  if (Array.isArray(result) && result.length >= 4) {
+    const [_, type, sep, value] = result
+    const data = {
+      gap: 'gap',
+      rowgap: 'row-gap',
+      columngap: 'column-gap',
+    }
+    const num = sep ? value : value * config.unitSize
+    return {
+      [data[type]]: `${num}${config.unit}`
     }
   }
 }
