@@ -1,15 +1,11 @@
-const styleName = 'visibility'
-
 const data = {
-  visible: {
-    [styleName]: 'visible',
-  },
-  invisible: {
-    [styleName]: 'hidden',
-  },
+  visible: 'visible',
+  invisible: 'hidden',
 }
 
 /**
+ * Visibility
+ * 
  * visible | invisible
  */
 export default {
@@ -18,6 +14,11 @@ export default {
     return !!data[k]
   },
   translate: (k, config) => {
-    return data[k]
+    const value = data[k]
+    if (value) {
+      return {
+        visibility: value
+      }
+    }
   }
 }
