@@ -22,7 +22,7 @@ const getStyle = (k, config) => {
 export default {
   name: 'overflow',
   match: (k, config) => {
-    return getStyle(k, config)
+    return regex.test(k)
   },
   translate: (k, config) => {
     return getStyle(k, config)
