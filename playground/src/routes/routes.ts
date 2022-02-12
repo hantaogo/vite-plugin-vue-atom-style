@@ -12,6 +12,7 @@ import ToEvenly from '@/views/ToEvenly.vue'
 import Flex from '@/views/Flex.vue'
 import FlexDirection from '@/views/FlexDirection.vue'
 import FontStyle from '@/views/FontStyle.vue'
+import FontWeight from '@/views/FontWeight.vue'
 import Color from '@/views/Color.vue'
 import LineHeight from '@/views/LineHeight.vue'
 import LetterSpacing from '@/views/LetterSpacing.vue'
@@ -113,6 +114,10 @@ export const routes = [
   {
     path: '/FontStyle',
     component: FontStyle,
+  },
+  {
+    path: '/FontWeight',
+    component: FontWeight,
   },
   {
     path: '/Color',

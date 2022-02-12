@@ -1,10 +1,10 @@
 export default {
   name: 'fontFamily',
   match: (k, config) => {
-    return /font.+/i.test(k)
+    return /^fontfamily.+$/i.test(k)
   },
   translate: (k, config) => {
-    const type = k.replace('font', '').replace('-', '')
+    const type = k.replace('fontfamily', '').replace('-', '')
     const p = config.theme.fontFamilies[type]
     if (p) {
       return {

@@ -1,20 +1,29 @@
-const getFontWeight = (k, config) => {
-  if (!k.startsWith('font')) {
-    return
+const getStyle = (k, config) => {
+  const key = k.replace('font', '')
+  const value = config.theme.fontWeights[key]
+  if (value) {
+    return {
+      'font-weight': value,
+    }
   }
-  const weight = k.replace('font', '')
-  return config.theme.fontWeights[weight]
 }
 
+const regex = /^font.+$/i
+
+/**
+ * fontWeight
+ * 
+ * font20 | font-20 | fontThin | fontNormal ...
+ */
 export default {
   name: 'fontWeight',
   match: (k, config) => {
-    return !!getFontWeight(k, config)
+    if (!regex.test(k)) {
+      return
+    }
+    return getStyle(k, config)
   },
   translate: (k, config) => {
-    const fontWeight = getFontWeight(k, config)
-    return {
-      'font-weight': fontWeight,
-    }
+    return getStyle(k, config)
   }
 }

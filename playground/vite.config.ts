@@ -13,6 +13,9 @@ export default defineConfig({
   plugins: [
     atomStyle({
       presets: [presetFower],
+      // debug: {
+      //   className: 'inlineBlock'
+      // },
     }),
     vue(),
     ViteRestart({

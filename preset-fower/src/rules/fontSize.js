@@ -1,9 +1,11 @@
 import { parseSize } from '../utils'
 
+const regex = /^text.+$/i
+
 export default {
   name: 'fontSize',
   match: (k, config) => {
-    return /text.+/i.test(k)
+    return regex.test(k)
   },
   translate: (k, config) => {
     const type = k.replace('text', '').replace('-', '')

@@ -49,5 +49,6 @@ export const mergeOptions = opts => {
     rules,
     marks,
     shortcuts,
+    debug: opts.debug || {},
   }
 }
