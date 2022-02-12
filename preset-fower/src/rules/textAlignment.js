@@ -1,25 +1,19 @@
 const styleName = 'text-align'
 
 const data = {
-  textleft: {
-    [styleName]: 'left',
-  },
-  textcenter: {
-    [styleName]: 'center',
-  },
-  textright: {
-    [styleName]: 'right',
-  },
-  textjustify: {
-    [styleName]: 'justify',
-  },
+  textleft: 'left',
+  textcenter: 'center',
+  textright: 'right',
+  textjustify: 'justify',
 }
 
 const getStyle = (k, config) => {
   if (data[k]) {
-    return data[k]
-  } else if (k.startsWith(`textalign-`)) {
-    const value = k.replace('textalign-', '')
+    return {
+      [styleName]: data[k]
+    }
+  } else if (k.startsWith(`textalign`)) {
+    const value = k.replace('textalign', '').replace('-', '')
     if (value) {
       return {
         [styleName]: value

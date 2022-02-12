@@ -1,26 +1,26 @@
-import { parseSize } from '../utils'
-
-const regex = /^text.+$/i
-
-export default {
-  name: 'fontSize',
-  match: (k, config) => {
-    return regex.test(k)
-  },
-  translate: (k, config) => {
-    const type = k.replace('text', '').replace('-', '')
-    const p = config.theme.fontSizes[type]
-    if (p) {
+const getStyle = (k, config) => {
+  if (k.startsWith('text')) {
+    const key = k.replace('text', '')
+    const num = config.theme.fontSizes[key]
+    if (num) {
       return {
-        'font-size': `${p}${config.unit}`
-      }
-    } else {
-      const size = parseSize(type, config.unit)
-      if (size) {
-        return {
-          'font-size': size
-        }
+        'font-size': `${num}${config.unit}`
       }
     }
+  }
+}
+
+/**
+ * Font Size
+ * 
+ * textBase | textLarge ...
+ */
+export default {
+  name: 'fontSize',
+  match: (k, config) => {   
+    return getStyle(k, config)
+  },
+  translate: (k, config) => {
+    return getStyle(k, config)
   }
 }

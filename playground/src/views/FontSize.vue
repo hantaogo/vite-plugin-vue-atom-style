@@ -14,9 +14,5 @@
     <div class="text7XL">text7XL</div>
     <div class="text8XL">text8XL</div>
     <div class="text9XL">text9XL</div>
-    <div class="text20">text20</div>
-    <div class="text24px">text24px</div>
-    <div class="text-2rem">text-2rem</div>
-    <div class="text-8vw">text-8vw</div>
   </div>
 </template>
