@@ -27,8 +27,8 @@ const getStyle = (k, config) => {
   } else {
     // 手动填写的值
     for (const key in typesMap) {
-      if (k.startsWith(`${key}-`)) {
-        const [_, value] = k.split('-')
+      if (k.startsWith(key)) {
+        const value = k.replace(`${key}-`, '')
         const size = Number.parseInt(value)
         if (!Number.isNaN(size)) {
           const obj = {}
@@ -42,12 +42,14 @@ const getStyle = (k, config) => {
   }
 }
 
+const regex = /^rounded.+$/i
+
 /**
  * 圆角
  */
 export default {
   match: (k, config) => {
-    return /^rounded.+$/.test(k)
+    return regex.test(k)
   },
   translate: (k, config) => {
     return getStyle(k, config)
