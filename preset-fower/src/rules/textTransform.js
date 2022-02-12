@@ -1,21 +1,13 @@
-const styleName = 'text-transform'
-
 const data = {
-  uppercase: {
-    [styleName]: 'uppercase',
-  },
-  lowercase: {
-    [styleName]: 'lowercase',
-  },
-  capitalize: {
-    [styleName]: 'capitalize',
-  },
-  normalcase: {
-    [styleName]: 'none',
-  },
+  uppercase: 'uppercase',
+  lowercase: 'lowercase',
+  capitalize: 'capitalize',
+  normalcase: 'none',
 }
 
 /**
+ * Text Transform
+ * 
  * uppercase | lowercase | capitalize | normalcase
  */
 export default {
@@ -24,6 +16,11 @@ export default {
     return !!data[k]
   },
   translate: (k, config) => {
-    return data[k]
+    const value = data[k]
+    if (value) {
+      return {
+        'text-transform': value
+      }
+    }
   }
 }
