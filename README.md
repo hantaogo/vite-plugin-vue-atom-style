@@ -10,6 +10,7 @@ Vue3的原子类样式引擎，为了方便创造自己的原子类库
 
 ## TODO
 - √ 定义一个功能完整的预制规则集合，参考：https://fower.vercel.app/zh-cn/
+- × 跟fower有些差别，待完善文档，具体区别目前可以到演示代码中查看
 - × 支持可预测的样式，参考：https://fower.vercel.app/zh-cn/docs/predictable-style
 
 ## 开发环境
@@ -36,6 +37,15 @@ export default defineConfig({
     vue(),
   ],
 })
+```
+
+## 演示环境
+
+```
+步骤1：下载代码
+步骤2：在playground目录执行命令：npm install
+步骤3：npm run dev
+步骤4：http://localhost:3000/
 ```
 
 ## 示例
