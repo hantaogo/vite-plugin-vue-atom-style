@@ -1,7 +1,8 @@
 import { parseSize } from '../utils'
 
+const regex = /^(scale[xy]?|rotate[xy]?|translate[xy]?|skew[xy]?|origin)-(.+)$/i
+
 const getStyle = (k, config) => {
-  const regex = /^(scale[xy]?|rotate[xy]?|translate[xy]?|skew[xy]?|origin)-(.+)$/i
   const result = k.match(regex)
   if (Array.isArray(result) && result.length >= 3) {
     const [_, key, value] = result
@@ -72,7 +73,7 @@ const getStyle = (k, config) => {
 export default {
   name: 'transform',
   match: (k, config) => {
-    return getStyle(k, config)
+    return regex.test(k)
   },
   translate: (k, config) => {
     return getStyle(k, config)
