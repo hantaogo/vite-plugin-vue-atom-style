@@ -1,14 +1,14 @@
 <template>
   <div>
     <h2>Line Height</h2>
-    <div class="lineNone">lineNone</div>
-    <div class="lineTight">lineTight</div>
-    <div class="lineSnug">lineSnug</div>
-    <div class="lineNormal">lineNormal</div>
-    <div class="lineRelaxed">lineRelaxed</div>
-    <div class="lineLoose">lineLoose</div>
-    <div class="line4">line4</div>
-    <div class="line20px">line20px</div>
-    <div class="line-2rem">line-2rem</div>
+    <div class="lineHeightNone">lineHeightNone</div>
+    <div class="lineHeightTight">lineHeightTight</div>
+    <div class="lineHeightSnug">lineHeightSnug</div>
+    <div class="lineHeightNormal">lineHeightNormal</div>
+    <div class="lineHeightRelaxed">lineHeightRelaxed</div>
+    <div class="lineHeightLoose">lineHeightLoose</div>
+    <div class="lineHeight4">lineHeight4</div>
+    <div class="lineHeight20px">lineHeight20px</div>
+    <div class="lineHeight-2rem">lineHeight-2rem</div>
   </div>
 </template>

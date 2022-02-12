@@ -3,10 +3,10 @@ import { parseSize } from '../utils'
 export default {
   name: 'lineHeight',
   match: (k, config) => {
-    return /^line.+$/i.test(k)
+    return /^lineheight.+$/i.test(k)
   },
   translate: (k, config) => {
-    const type = k.replace('line', '').replace('-', '')
+    const type = k.replace('lineheight', '').replace('-', '')
     const p = config.theme.lineHeights[type]
     if (p) {
       return {
