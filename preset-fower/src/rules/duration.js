@@ -5,21 +5,18 @@
  */
 
 const getStyle = (k, config) => {
-  const str = `duration-`
-  if (k.startsWith(str)) {
-    const num = Number.parseInt(k.replace(str, ''))
-    if (!Number.isNaN(num)) {
-      return {
-        'transition-duration': `${num}ms`,
-      }
-    }
+  const num = k.replace('duration', '').replace('-', '')
+  return {
+    'transition-duration': `${num}ms`,
   }
 }
+
+const regex = /^duration-?\d+$/i
 
 export default {
   name: 'duration',
   match: (k, config) => {
-    return getStyle(k, config)
+    return regex.test(k)
   },
   translate: (k, config) => {
     return getStyle(k, config)

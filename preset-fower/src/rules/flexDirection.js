@@ -1,5 +1,5 @@
 const styleName = 'flex-direction'
-const regex = /^(row|column|flexdirection-.+)$/i
+const regex = /^(row|column|flexdirection-?.+)$/i
 
 /**
  * flex 方向
@@ -27,7 +27,7 @@ export default {
           [styleName]: 'column',
         }
       } else {
-        const value = key.replace('flexdirection-', '')
+        const value = key.replace('flexdirection', '').replace('-', '')
         return {
           display: 'flex',
           [styleName]: value,

@@ -11,7 +11,7 @@ const data = {
 }
 
 /**
- * flex支持
+ * flex
  * flexAuto flex: 1 1 auto;
  * flexInitial flex: 0 1 auto;
  * flexNone flex: 'none';
@@ -22,7 +22,7 @@ export default {
   match: (k, config) => {
     if (data[k]) {
       return true
-    } else if (k.startsWith(`flex-`)) {
+    } else if (k.startsWith('flex-')) {
       return true
     }
     return false
@@ -33,7 +33,7 @@ export default {
         display: 'flex',
         ...data[k],
       }
-    } else if (k.startsWith(`flex-`)) {
+    } else if (k.startsWith('flex-')) {
       const val = k.replace('flex-', '').replace(/\-/g, ' ')
       return {
         display: 'flex',

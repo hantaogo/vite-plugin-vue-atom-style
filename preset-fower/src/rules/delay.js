@@ -5,21 +5,18 @@
  */
 
 const getStyle = (k, config) => {
-  const str = `delay-`
-  if (k.startsWith(str)) {
-    const num = Number.parseInt(k.replace(str, ''))
-    if (!Number.isNaN(num)) {
-      return {
-        'transition-delay': `${num}ms`,
-      }
-    }
+  const num = k.replace('delay', '').replace('-', '')
+  return {
+    'transition-delay': `${num}ms`,
   }
 }
+
+const regex = /^delay-?\d+$/i
 
 export default {
   name: 'delay',
   match: (k, config) => {
-    return getStyle(k, config)
+    return regex.test(k)
   },
   translate: (k, config) => {
     return getStyle(k, config)

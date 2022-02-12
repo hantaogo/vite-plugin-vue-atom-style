@@ -10,6 +10,7 @@ import ToBetween from '@/views/ToBetween.vue'
 import ToAround from '@/views/ToAround.vue'
 import ToEvenly from '@/views/ToEvenly.vue'
 import Flex from '@/views/Flex.vue'
+import FlexDirection from '@/views/FlexDirection.vue'
 import FontStyle from '@/views/FontStyle.vue'
 import Color from '@/views/Color.vue'
 import LineHeight from '@/views/LineHeight.vue'
@@ -104,6 +105,10 @@ export const routes = [
   {
     path: '/Flex',
     component: Flex,
+  },
+  {
+    path: '/FlexDirection',
+    component: FlexDirection,
   },
   {
     path: '/FontStyle',
