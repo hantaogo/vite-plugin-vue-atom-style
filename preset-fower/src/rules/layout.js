@@ -1,13 +1,21 @@
 const ToCenter = 'tocenter'
+const ToBetween = 'tobetween'
+const ToEvenly = 'toevenly'
+const ToAround = 'toaround'
+
 const ToCenterX = 'tocenterx'
 const ToCenterY = 'tocentery'
 const ToLeft = 'toleft'
 const ToRight = 'toright'
 const ToTop = 'totop'
 const ToBottom = 'tobottom'
-const ToBetween = 'tobetween'
-const ToEvenly = 'toevenly'
-const ToAround = 'toaround'
+
+const PutCenterX = 'putcenterx'
+const PutCenterY = 'putcentery'
+const PutLeft = 'putleft'
+const PutRight = 'putright'
+const PutTop = 'puttop'
+const PutBottom = 'putbottom'
 
 const Flex = 'flex'
 const JustifyContent = 'justify-content'
@@ -21,15 +29,21 @@ const SpaceEvenly = 'space-evenly'
 
 const keys = {
   [ToCenter]: true,
+  [ToBetween]: true,
+  [ToEvenly]: true,
+  [ToAround]: true,
   [ToCenterX]: true,
   [ToCenterY]: true,
   [ToLeft]: true,
   [ToRight]: true,
   [ToTop]: true,
   [ToBottom]: true,
-  [ToBetween]: true,
-  [ToEvenly]: true,
-  [ToAround]: true,
+  [PutCenterX]: true,
+  [PutCenterY]: true,
+  [PutLeft]: true,
+  [PutRight]: true,
+  [PutTop]: true,
+  [PutBottom]: true,
 }
 
 const getDirection = (classNames) => {
@@ -73,7 +87,7 @@ const getDirection = (classNames) => {
 }
 
 const getStyle = (k, config, classNames) => {
-  const direction = getDirection(classNames)
+  // const direction = getDirection(classNames)
   if (k === ToCenter) {
     return {
       display: Flex,
@@ -124,6 +138,36 @@ const getStyle = (k, config, classNames) => {
     return {
       display: Flex,
       [JustifyContent]: SpaceEvenly,
+    }
+  } else if (k === PutCenterX) {
+    return {
+      display: Flex,
+      [AlignItems]: Center,
+    }
+  } else if (k === PutCenterY) {
+    return {
+      display: Flex,
+      [JustifyContent]: Center,
+    }
+  } else if (k === PutLeft) {
+    return {
+      display: Flex,
+      [AlignItems]: FlexStart,
+    }
+  } else if (k === PutRight) {
+    return {
+      display: Flex,
+      [AlignItems]: FlexEnd,
+    }
+  } else if (k === PutTop) {
+    return {
+      display: Flex,
+      [JustifyContent]: FlexStart,
+    }
+  } else if (k === PutBottom) {
+    return {
+      display: Flex,
+      [JustifyContent]: FlexEnd,
     }
   }
 }

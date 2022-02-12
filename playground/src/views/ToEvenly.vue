@@ -5,5 +5,50 @@
       <div class="square-60 bgOrange400 rounded-8"></div>
       <div class="square-80 bgBlue400 rounded-8"></div>
     </div>
+    <h2>Compose</h2>
+    <div class="bgGray100 grid gridTemplateColumns-3 gap4">
+      <div class="column toCenter spaceY2 p4">
+        <div>row toEvenly toTop</div>
+        <div class="row toEvenly toTop square-200 bgBlue100">
+          <div class="square-60 bgOrange400 rounded-8"></div>
+          <div class="square-80 bgBlue400 rounded-8"></div>
+        </div>
+      </div>
+      <div class="column toCenter spaceY2 p4">
+        <div>row toEvenly toCenterY</div>
+        <div class="row toEvenly toCenterY square-200 bgBlue100">
+          <div class="square-60 bgOrange400 rounded-8"></div>
+          <div class="square-80 bgBlue400 rounded-8"></div>
+        </div>
+      </div>
+      <div class="column toCenter spaceY2 p4">
+        <div>row toEvenly toBottom</div>
+        <div class="row toEvenly toBottom square-200 bgBlue100">
+          <div class="square-60 bgOrange400 rounded-8"></div>
+          <div class="square-80 bgBlue400 rounded-8"></div>
+        </div>
+      </div>
+      <div class="column toCenter spaceY2 p4">
+        <div>column toEvenly putLeft</div>
+        <div class="column toEvenly putLeft square-200 bgBlue100">
+          <div class="square-60 bgOrange400 rounded-8"></div>
+          <div class="square-80 bgBlue400 rounded-8"></div>
+        </div>
+      </div>
+      <div class="column toCenter spaceY2 p4">
+        <div>column toEvenly putCenterX</div>
+        <div class="column toEvenly putCenterX square-200 bgBlue100">
+          <div class="square-60 bgOrange400 rounded-8"></div>
+          <div class="square-80 bgBlue400 rounded-8"></div>
+        </div>
+      </div>
+      <div class="column toCenter spaceY2 p4">
+        <div>column toEvenly putRight</div>
+        <div class="column toEvenly putRight square-200 bgBlue100">
+          <div class="square-60 bgOrange400 rounded-8"></div>
+          <div class="square-80 bgBlue400 rounded-8"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
