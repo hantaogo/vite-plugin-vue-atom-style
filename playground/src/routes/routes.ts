@@ -28,6 +28,7 @@ import BorderRadius from '@/views/BorderRadius.vue'
 import BorderWidth from '@/views/BorderWidth.vue'
 import BorderColor from '@/views/BorderColor.vue'
 import BorderStyle from '@/views/BorderStyle.vue'
+import BoxAlignment from '@/views/BoxAlignment.vue'
 import Ring from '@/views/Ring.vue'
 import GridTemplateColumns from '@/views/GridTemplateColumns.vue'
 import Gap from '@/views/Gap.vue'
@@ -175,6 +176,10 @@ export const routes = [
   {
     path: '/BorderStyle',
     component: BorderStyle,
+  },
+  {
+    path: '/BoxAlignment',
+    component: BoxAlignment,
   },
   {
     path: '/Ring',

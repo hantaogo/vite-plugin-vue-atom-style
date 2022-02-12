@@ -1,17 +1,23 @@
 /**
  * Box Alignment
  * 
- * justifyContent={value} justify-content: {value};
- * alignItems ={value} align-items: {value};
- * alignContent={value} align-content: {value};
- * alignSelf={value} align-self: {value};
+ * justifyContent-{value} justify-content: {value};
+ * justifyItems-{value} justify-items: {value};
+ * justifySelf-{value} justify-self: {value};
+ * alignContent-{value} align-content: {value};
+ * alignItems-{value} align-items: {value};
+ * alignSelf-{value} align-self: {value};
  */
 const data = {
   justifycontent: 'justify-content',
+  justifyitems: 'justify-items',
+  justifyself: 'justify-self',
   alignitems: 'align-items',
   aligncontent: 'align-content',
   alignself: 'align-self',
 }
+
+const regex = /^(justifycontent|justifyitems|justifyself|aligncontent|alignitems|alignself).+$/i
 
 const getStyle = (k, config) => {
   let foundKey = undefined
@@ -22,18 +28,22 @@ const getStyle = (k, config) => {
     }
   }
   if (foundKey) {
-    const value = k.replace(`${foundKey}-`, '')
+    const value = k.replace(`${foundKey}`, '').replace('-', '')
     if (value) {
-      return {
+      const obj = {
         [data[foundKey]]: value
       }
+      if (foundKey !== 'justifyitems') {
+        obj.display = 'flex'
+      }
+      return obj
     }
   }
 }
 
 export default {
   match: (k, config) => {
-    return getStyle(k, config)
+    return regex.test(k)
   },
   translate: (k, config) => {
     return getStyle(k, config)

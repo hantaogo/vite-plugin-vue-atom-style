@@ -1,16 +1,11 @@
 const getStyle = (k, config) => {
-  const columnRegex = /^gridtemplatecolumns\-(\d+)$/i
-  const result = k.match(columnRegex)
-  if (Array.isArray(result) && result.length >= 2) {
-    const [_, value] = result
-    let num = Number.parseInt(value)
-    if (!Number.isNaN(num)) {
-      return {
-        'grid-template-columns': `repeat(${num}, minmax(0px, 1fr))`
-      }
-    }
+  const numColumn = k.replace('gridtemplatecolumns', '').replace('-', '')
+  return {
+    'grid-template-columns': `repeat(${numColumn}, minmax(0px, 1fr))`
   }
 }
+
+const regex = /^gridtemplatecolumns-?(\d+)$/i
 
 /**
  * gridTemplateColumns
@@ -19,7 +14,7 @@ const getStyle = (k, config) => {
  */
 export default {
   match: (k, config) => {
-    return getStyle(k, config)
+    return regex.test(k)
   },
   translate: (k, config) => {
     return getStyle(k, config)
