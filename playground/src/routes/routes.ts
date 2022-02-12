@@ -1,4 +1,7 @@
 import Base from '@/views/Base.vue'
+import Size from '@/views/Size.vue'
+import Margin from '@/views/Margin.vue'
+import Padding from '@/views/Padding.vue'
 import ToCenter from '@/views/ToCenter.vue'
 import ToCenterX from '@/views/ToCenterX.vue'
 import ToCenterY from '@/views/ToCenterY.vue'
@@ -62,6 +65,18 @@ export const routes = [
   {
     path: '/',
     component: Base,
+  },
+  {
+    path: '/Size',
+    component: Size,
+  },
+  {
+    path: '/Margin',
+    component: Margin,
+  },
+  {
+    path: '/Padding',
+    component: Padding,
   },
   {
     path: '/ToCenter',
