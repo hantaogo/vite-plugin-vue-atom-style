@@ -1,12 +1,19 @@
 <script setup>
 import { ref } from 'vue'
-const green = ref(true)
+import { routes } from '../routes/routes'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const items = ref(routes.filter(t => t.path !== '/'))
+
+const go = path => {
+  router.push(path)
+}
 </script>
 
 <template>
-  <div class="column toCenter bgBlue100">
-    <div class="title text4XL pink300 w-100 h-50 bgGreen600 bgGreen600--L10--hover p-4p">标题</div>
-    <div :class="['shadowLg', 'text3XL', green ? 'bgGray400' : 'bgRed500', 'square-200', 'bgPink300--hover',]" @click="green = !green">Hello vue-atom-style.</div>
-    <input class="w-80 h-40 bgBlue300 bgBlue300--D20--active m-8 pr4" value="你好"/>
+  <div class="grid gridTemplateColumns-3 gap4">
+    <div v-for="(item, index) of items" :key="index" class="button w-100p" @click="go(item.path)">{{ item.path.replace('/', '') }}</div>
   </div>
 </template>
