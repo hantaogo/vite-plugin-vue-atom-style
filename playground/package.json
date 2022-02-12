@@ -1,7 +1,6 @@
 {
   "name": "vite-plugin-vue-atom-style",
   "description": "",
-  "version": "0.0.3",
   "author": "hantaogo",
   "repository": "https://github.com/hantaogo/vite-plugin-vue-atom-style.git",
   "license": "MIT",
