@@ -1,9 +1,9 @@
 <template>
   <div class="row spaceX4 bgGreen50 p6 white">
-    <div class="toCenter square-100 bgGreen500 opacity-20">
+    <div class="toCenter square-100 bgGreen500 opacity20">
       opacity-20
     </div>
-    <div class="toCenter square-100 bgGreen500 opacity-40">
+    <div class="toCenter square-100 bgGreen500 opacity40">
       opacity-40
     </div>
     <div class="toCenter square-100 bgGreen500 opacity-60">

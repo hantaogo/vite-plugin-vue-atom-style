@@ -1,27 +1,20 @@
+const regex = /^opacity-?([0-9]{1,2}|100)$/i
+
 /**
  * opacity
  * 
- * opacity-{value} opacity: {value}
+ * 透明度 0-100
+ * opacity50 | opacity-50 -> opacity: 0.5
  */
-
- const getStyle = (k, config) => {
-  const str = `opacity-`
-  if (k.startsWith(str)) {
-    const z = Number.parseInt(k.replace(str, ''))
-    if (!Number.isNaN(z)) {
-      return {
-        'opacity': z / 100,
-      }
-    }
-  }
-}
-
 export default {
   name: 'opacity',
   match: (k, config) => {
-    return getStyle(k, config)
+    return regex.test(k)
   },
   translate: (k, config) => {
-    return getStyle(k, config)
+    const num = k.replace('opacity', '').replace('-', '')
+    return {
+      'opacity': num / 100,
+    }
   }
 }
