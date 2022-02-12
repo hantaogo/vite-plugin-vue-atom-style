@@ -1,30 +1,25 @@
-const key1 = 'bordercolor'
-const key2 = 'border'
-const styleName = 'border-color'
-
 const getColor = (k, config) => {
-  if (k.startsWith(`${key1}-`)) {
-    const [_, color] = k.split('-')
+  if (k.startsWith('bordercolor-')) {
+    const color = k.replace('bordercolor-', '')
     if (color) {
       return `#${color}`
     }
   } else {
-    const colorName = k.replace(key2, '')
-    const color = config.theme.colors[colorName]
-    if (color) {
-      return color
-    }
+    const colorName = k.replace('border', '')
+    return config.theme.colors[colorName]
   }
 }
 
 export default {
   match: (k, config) => {
-    return getColor(k, config)
+    return !!getColor(k, config)
   },
   translate: (k, config) => {
     const color = getColor(k, config)
-    return {
-      [styleName]: color
+    if (color) {
+      return {
+        'border-color': color
+      }
     }
   }
 }
