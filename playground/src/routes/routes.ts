@@ -4,6 +4,8 @@ import Margin from '@/views/Margin.vue'
 import Padding from '@/views/Padding.vue'
 import Space from '@/views/Space.vue'
 import Breakpoints from '@/views/Breakpoints.vue'
+import Orientation from '@/views/Orientation.vue'
+import Theme from '@/views/Theme.vue'
 import ToCenter from '@/views/ToCenter.vue'
 import ToCenterX from '@/views/ToCenterX.vue'
 import ToCenterY from '@/views/ToCenterY.vue'
@@ -87,6 +89,14 @@ export const routes = [
   {
     path: '/Breakpoints',
     component: Breakpoints,
+  },
+  {
+    path: '/Orientation',
+    component: Orientation,
+  },
+  {
+    path: '/Theme',
+    component: Theme,
   },
   {
     path: '/ToCenter',

@@ -28,7 +28,7 @@ export const generate = (code, options) => {
       }
 
       // 生成css
-      const { media, prefix, selector, pseudo, animate, ...style } = obj
+      const { prefix, selector, pseudo, animate, breakpoints, orientation, theme, ...style } = obj
 
       // 样式代码
       let styleString = ''
@@ -40,10 +40,10 @@ export const generate = (code, options) => {
       // 样式文本
       let text = ''
 
-      // 支持多个伪类
+      // 支持主题和多个伪类
       const pseudos = Array.isArray(pseudo) ? pseudo : [pseudo || '']
       for (const p of pseudos) {
-        text += (prefix || '') + `.${className}` + (p || '') + (selector ? ` ${selector} ` : '') + `{ ${styleString}}\n`
+        text += (prefix || '') + (theme ? `.${theme} ` : '') + `.${className}` + (p || '') + (selector ? ` ${selector} ` : '') + `{ ${styleString}}\n`
       }
 
       // 动画
@@ -53,13 +53,24 @@ export const generate = (code, options) => {
       }
 
       // 媒体查询
-      if (media) {
-        css += `@media (${media}) {\n${text}}\n`
+      const mediaList = []
+
+      // 最小宽度
+      if (breakpoints) {
+        mediaList.push(`(min-width: ${breakpoints})`)
+      }
+      // 方向
+      if (orientation) {
+        mediaList.push(`(orientation: ${orientation})`)
+      }
+
+      if (mediaList.length > 0) {
+        css += `@media ${mediaList.join(' and ')} {\n${text}}\n`
       } else {
         css += text
       }
     }
   }
-  console.log('css', css)
+
   return css
 }

@@ -10,11 +10,12 @@ const changeTheme = () => {
     theme.value = 'dark'
   }
 }
+
 </script>
 
 <template>
   <div :class="theme">
-    <div class="button" @click="changeTheme">切换主题</div>
-    <router-view></router-view>
+    <h2 class="title">Theme {{ theme }}</h2>
+    <div class="square-400 toCenter bgBlue100 bgRed500--dark" @click="changeTheme">square-400 bgBlue100 bgRed500--dark</div>
   </div>
 </template>

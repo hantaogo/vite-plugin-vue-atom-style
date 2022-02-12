@@ -7,10 +7,10 @@ Vue3的原子类样式引擎，为了方便创造自己的原子类库
 - class中可以使用表达式
 - 支持热更新
 - 可修改px为自定义单位，例如：rpx
-- 可修改标记的分隔符，例如：text2XL:hover:dark 修改为 text2XL--hover--dark
 
 ## TODO
-- 定义一个功能完整的预制规则集合，参考：[fower](https://fower.vercel.app/zh-cn/)
+- √ 定义一个功能完整的预制规则集合，参考：https://fower.vercel.app/zh-cn/
+- × 支持可预测的样式，参考：https://fower.vercel.app/zh-cn/docs/predictable-style
 
 ## 开发环境
 - Vue 3

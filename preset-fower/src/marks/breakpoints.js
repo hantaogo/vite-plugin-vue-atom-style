@@ -6,7 +6,7 @@ export default {
     const value = config.theme.breakpoints[k]
     if (value) {
       return {
-        media: `min-width: ${value}`,
+        breakpoints: value,
       }
     }
   }

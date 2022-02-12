@@ -3,9 +3,10 @@ import { parseClassName } from './parseClassName'
 export const matchRules = (className, options) => {
   // 快捷方式
   const classNames = []
-  if (options.shortcuts[className]) {
-    const v = options.shortcuts[k]
-    const arr = Array.isArray(v) ? v : []
+  const shortcutKey = className.toLowerCase()
+  if (options.shortcuts[shortcutKey]) {
+    const shortcuts = options.shortcuts[shortcutKey].split(' ')
+    const arr = Array.isArray(shortcuts) ? shortcuts : []
     for (const t of arr) {
       classNames.push(t)
     }

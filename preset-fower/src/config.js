@@ -6,6 +6,9 @@ export default {
   unitSize: 4,
   theme: {
     colors,
+    modes: {
+      dark: 'dark',
+    },
     breakpoints: {
       sm: '640px',
       md: '768px',

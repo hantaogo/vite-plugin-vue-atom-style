@@ -38,7 +38,6 @@ export default {
       for (const name of names) {
         style[name] = size
       }
-      console.log('style', k, style)
       return style
     }
   }

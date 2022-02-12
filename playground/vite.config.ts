@@ -16,6 +16,9 @@ export default defineConfig({
       // debug: {
       //   className: 'inlineBlock'
       // },
+      shortcuts: {
+        'button': 'w-100 h-50 bgBlue300 white roundedSmall shadowLarge transitionCommon duration-150 scale-110--active toCenter',
+      },
     }),
     vue(),
     ViteRestart({
