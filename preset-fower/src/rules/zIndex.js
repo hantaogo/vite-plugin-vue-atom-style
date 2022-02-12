@@ -1,27 +1,19 @@
+const regex = /^zindex-?\d+$/
+
 /**
  * zIndex
  * 
- * zIndex-{value} z-index: {value}
+ * zIndex{value} | zIndex-{value} -> z-index: {value}
  */
-
-const getStyle = (k, config) => {
-  const str = `zindex-`
-  if (k.startsWith(str)) {
-    const z = Number.parseInt(k.replace(str, ''))
-    if (!Number.isNaN(z)) {
-      return {
-        'z-index': z,
-      }
-    }
-  }
-}
-
 export default {
   name: 'zIndex',
   match: (k, config) => {
-    return getStyle(k, config)
+    return regex.test(k)
   },
   translate: (k, config) => {
-    return getStyle(k, config)
+    const value = k.replace('zindex', '').replace('-', '')
+    return {
+      'z-index': value,
+    }
   }
 }
