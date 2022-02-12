@@ -48,6 +48,7 @@ import delay from './delay'
 import ease from './ease'
 import animate from './animate'
 import transform from './transform'
+import letterSpacing from './letterSpacing'
 
 export default [
   layout,
@@ -63,6 +64,7 @@ export default [
   backgroundColor,
   placeholderColor,
   lineHeight,
+  letterSpacing,
   listType,
   shadow,
   opacity,

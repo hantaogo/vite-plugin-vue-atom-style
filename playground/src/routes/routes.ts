@@ -13,6 +13,7 @@ import Flex from '@/views/Flex.vue'
 import FontStyle from '@/views/FontStyle.vue'
 import Color from '@/views/Color.vue'
 import LineHeight from '@/views/LineHeight.vue'
+import LetterSpacing from '@/views/LetterSpacing.vue'
 import ListType from '@/views/ListType.vue'
 import BackgroundColor from '@/views/BackgroundColor.vue'
 import PlaceholderColor from '@/views/PlaceholderColor.vue'
@@ -112,6 +113,10 @@ export const routes = [
   {
     path: '/LineHeight',
     component: LineHeight,
+  },
+  {
+    path: '/LetterSpacing',
+    component: LetterSpacing,
   },
   {
     path: '/ListType',

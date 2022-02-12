@@ -2,21 +2,21 @@ import { parseSize } from '../utils'
 
 export default {
   match: (k, config) => {
-    return /line.+/.test(k)
+    return /letter.+/.test(k)
   },
   translate: (k, config) => {
-    const type = k.replace('line', '')
-    const p = config.theme.lineHeights[type]
+    const type = k.replace('letter', '')
+    const p = config.theme.letterSpacings[type]
     if (p) {
       return {
-        'line-height': p
+        'letter-spacing': `${p}${config.unit}`
       }
     } else {
       const str = type.replace('-', '')
-      const size = parseSize(str, '')
+      const size = parseSize(str, config.unit)
       if (size) {
         return {
-          'line-height': size
+          'letter-spacing': size
         }
       }
     }

@@ -74,12 +74,12 @@ export default {
       loose: 2,
     },
     letterSpacings: {
-      tighter: '-0.9px',
-      tight: '-0.45px',
-      normal: '0px',
-      wide: '0.45px',
-      wider: '0.9px',
-      widest: '1.8px',
+      tighter: -0.9,
+      tight: -0.45,
+      normal: 0,
+      wide: 0.45,
+      wider: 0.9,
+      widest: 1.8,
     },
     radii: {
       none: 0,
