@@ -1,18 +1,16 @@
-const key = 'flexgrow'
+const regex = /^flexgrow-?.+$/i
 
 /**
- * flex 增长
+ * flexGrow
  * flexGrow-{value}
  */
 export default {
   name: 'flexGrow',
   match: (k, config) => {
-    if (k.startsWith(`${key}-`)) {
-      return true
-    }
+    return regex.test(k)
   },
   translate: (k, config, obj) => {
-    const [_, value] = k.split('-')
+    const value = k.replace(`flexgrow`, '').replace('-', '')
     return {
       display: 'flex',
       'flex-grow': value

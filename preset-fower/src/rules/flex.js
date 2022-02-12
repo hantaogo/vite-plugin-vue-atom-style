@@ -1,3 +1,5 @@
+import { parseSize } from '../utils'
+
 const data = {
   flexauto: {
     'flex': '1 1 auto',
@@ -34,7 +36,14 @@ export default {
         ...data[k],
       }
     } else if (k.startsWith('flex-')) {
-      const val = k.replace('flex-', '').replace(/\-/g, ' ')
+      // flex 为2个值时，不判断
+      // flex 为3个值，且basis不为0时，替换basis单位: flex-grow | flex-shrink | flex-basis
+      const str = k.replace('flex-', '')
+      const values = str.split('-')
+      if (values.length === 3 && values[2] !== '0') {
+        values[2] = parseSize(values[2], config.unit)
+      }
+      const val = values.join(' ')
       return {
         display: 'flex',
         'flex': val

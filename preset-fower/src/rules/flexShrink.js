@@ -1,18 +1,16 @@
-const key = 'flexshrink'
+const regex = /^flexshrink-?.+$/i
 
 /**
- * flex 缩小
+ * flexShrink
  * flexShrink-{value}
  */
 export default {
   name: 'flexShrink',
   match: (k, config) => {
-    if (k.startsWith(`${key}-`)) {
-      return true
-    }
+    return regex.test(k)
   },
   translate: (k, config, obj) => {
-    const [_, value] = k.split('-')
+    const value = k.replace(`flexshrink`, '').replace('-', '')
     return {
       display: 'flex',
       'flex-shrink': value

@@ -2,6 +2,7 @@ import layout from './layout'
 import flex from './flex'
 import flexDirection from './flexDirection'
 import flexWrap from './flexWrap'
+import flexBasis from './flexBasis'
 import flexGrow from './flexGrow'
 import flexShrink from './flexShrink'
 import fontFamily from './fontFamily'
@@ -56,6 +57,7 @@ export default [
   flex,
   flexDirection,
   flexWrap,
+  flexBasis,
   flexGrow,
   flexShrink,
   fontFamily,
