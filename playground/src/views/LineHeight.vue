@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2>Line Height</h2>
     <div class="leadingNone">leadingNone line-height: 1;</div>
     <div class="leadingTight">leadingTight line-height: 1.25;</div>
     <div class="leadingSnug">leadingSnug line-height: 1.375;</div>
