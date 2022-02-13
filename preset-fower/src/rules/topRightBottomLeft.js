@@ -1,13 +1,18 @@
-const regex = /^(top|right|bottom|left)(\-?\d+)(p)?$/i
+import { parseSize } from '../utils'
+
+const regex = /^(top|right|bottom|left)(-?)(.+)?$/i
 
 const getStyle = (k, config) => {
   const result = k.match(regex)
   if (Array.isArray(result) && result.length >= 4) {
     const key = result[1]
-    const value = result[2]
-    const percent = result[3]
-    return {
-      [key]: percent ? `${value}%` : `${value}${config.unit}`,
+    const sep = result[2]
+    const value = result[3]
+    const size = parseSize(value, config.unit, sep ? 1 : config.unitSize)
+    if (size) {
+      return {
+        [key]: size
+      }
     }
   }
 }
