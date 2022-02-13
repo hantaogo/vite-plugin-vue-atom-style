@@ -4,21 +4,6 @@
   "author": "hantaogo",
   "repository": "https://github.com/hantaogo/vite-plugin-vue-atom-style.git",
   "license": "MIT",
-  "keywords": [
-    "taro",
-    "fower"
-  ],
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
-    }
-  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
