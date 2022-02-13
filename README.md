@@ -1,5 +1,7 @@
 # vite-plugin-vue-atom-style
-Vue3的原子类样式引擎，为了方便创造自己的原子类库
+Vue3的原子类样式引擎，为了创造一个简单，兼容性强，且容易使用的原子类工具
+
+## 还不成熟，未准备好生产
 
 ## 特性：
 - vite插件，编译时解析组件的class属性，生成原子类到```<style scoped>```
@@ -7,6 +9,7 @@ Vue3的原子类样式引擎，为了方便创造自己的原子类库
 - class中可以使用表达式
 - 支持热更新
 - 可修改px为自定义单位，例如：rpx
+
 
 ## TODO
 - √ 定义一个功能完整的预制规则集合，参考：https://fower.vercel.app/zh-cn/
@@ -16,6 +19,19 @@ Vue3的原子类样式引擎，为了方便创造自己的原子类库
 ## 开发环境
 - Vue 3
 - Vite
+
+## 演示
+在线演示：
+http://atomstyle.japple.fun
+
+本地运行：
+```
+步骤1：下载代码
+步骤2：cd playground
+步骤3：npm install
+步骤4：npm run dev
+步骤5：打开 http://localhost:3000/
+```
 
 ## 快速开始
 
@@ -37,15 +53,6 @@ export default defineConfig({
     vue(),
   ],
 })
-```
-
-## 演示环境
-
-```
-步骤1：下载代码
-步骤2：在playground目录执行命令：npm install
-步骤3：npm run dev
-步骤4：http://localhost:3000/
 ```
 
 ## 示例
