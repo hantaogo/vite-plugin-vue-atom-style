@@ -1,7 +1,7 @@
 {
   "name": "@vite-plugin-vue-atom-style/preset-fower",
   "description": "a preset for vite-plugin-vue-atom-style",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "hantaogo",
   "repository": "https://github.com/hantaogo/vite-plugin-vue-atom-style.git",
   "license": "MIT",
