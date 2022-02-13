@@ -21,6 +21,7 @@ import FlexDirection from '@/views/FlexDirection.vue'
 import FontStyle from '@/views/FontStyle.vue'
 import FontWeight from '@/views/FontWeight.vue'
 import Color from '@/views/Color.vue'
+import Colors from '@/views/Colors.vue'
 import LineHeight from '@/views/LineHeight.vue'
 import LetterSpacing from '@/views/LetterSpacing.vue'
 import ListType from '@/views/ListType.vue'
@@ -157,6 +158,10 @@ export const routes = [
   {
     path: '/Color',
     component: Color,
+  },
+  {
+    path: '/Colors',
+    component: Colors,
   },
   {
     path: '/LineHeight',
