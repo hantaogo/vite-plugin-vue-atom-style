@@ -64,7 +64,7 @@ const green = ref(true)
 </script>
 
 <template>
-  <div class="column toCenter">
+  <div class="column-toCenter">
     <div class="title text4XL pink300 w400 h200 bgGreen400">标题</div>
     <div :class="['shadowLg', 'text3XL', green ? 'bgGray400' : 'bgRed500', 'square300', 'bgPink300--hover', 'p10']" @click="green = !green">Hello vue-atom-style.</div>
   </div>

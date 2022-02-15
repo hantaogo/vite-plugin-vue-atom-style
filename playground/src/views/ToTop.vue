@@ -7,65 +7,65 @@
     </div>
     <h2>Compose</h2>
     <div class="bgGray100 grid gridTemplateColumns-3 gap4">
-      <div class="column toCenter spaceY2 p4">
-        <div>row toTop toLeft</div>
-        <div class="row toTop toLeft square-200 bgBlue100">
+      <div class="column-toCenter spaceY2 p4">
+        <div>row-toTop-toLeft</div>
+        <div class="row-toTop-toLeft square-200 bgBlue100">
           <div class="square-60 bgOrange400 rounded-8"></div>
           <div class="square-80 bgBlue400 rounded-8"></div>
         </div>
       </div>
-      <div class="column toCenter spaceY2 p4">
-        <div>row toTop toCenterX</div>
-        <div class="row toTop toCenterX square-200 bgBlue100">
+      <div class="column-toCenter spaceY2 p4">
+        <div>row-toTop-toCenterX</div>
+        <div class="row-toTop-toCenterX square-200 bgBlue100">
           <div class="square-60 bgOrange400 rounded-8"></div>
           <div class="square-80 bgBlue400 rounded-8"></div>
         </div>
       </div>
-      <div class="column toCenter spaceY2 p4">
-        <div>row toTop toRight</div>
-        <div class="row toTop toRight square-200 bgBlue100">
+      <div class="column-toCenter spaceY2 p4">
+        <div>row-toTop-toRight</div>
+        <div class="row-toTop-toRight square-200 bgBlue100">
           <div class="square-60 bgOrange400 rounded-8"></div>
           <div class="square-80 bgBlue400 rounded-8"></div>
         </div>
       </div>
-      <div class="column toCenter spaceY2 p4">
-        <div>row toTop toBetween</div>
-        <div class="row toTop toBetween square-200 bgBlue100">
+      <div class="column-toCenter spaceY2 p4">
+        <div>row-toTop-toBetween</div>
+        <div class="row-toTop-toBetween square-200 bgBlue100">
           <div class="square-60 bgOrange400 rounded-8"></div>
           <div class="square-80 bgBlue400 rounded-8"></div>
         </div>
       </div>
-      <div class="column toCenter spaceY2 p4">
-        <div>row toTop toAround</div>
-        <div class="row toTop toAround square-200 bgBlue100">
+      <div class="column-toCenter spaceY2 p4">
+        <div>row-toTop-toAround</div>
+        <div class="row-toTop-toAround square-200 bgBlue100">
           <div class="square-60 bgOrange400 rounded-8"></div>
           <div class="square-80 bgBlue400 rounded-8"></div>
         </div>
       </div>
-      <div class="column toCenter spaceY2 p4">
-        <div>row toTop toEvenly</div>
-        <div class="row toTop toEvenly square-200 bgBlue100">
+      <div class="column-toCenter spaceY2 p4">
+        <div>row-toTop-toEvenly</div>
+        <div class="row-toTop-toEvenly square-200 bgBlue100">
           <div class="square-60 bgOrange400 rounded-8"></div>
           <div class="square-80 bgBlue400 rounded-8"></div>
         </div>
       </div>
-      <div class="column toCenter spaceY2 p4">
-        <div>column putTop putLeft</div>
-        <div class="column putTop putLeft square-200 bgBlue100">
+      <div class="column-toCenter spaceY2 p4">
+        <div>column-toTop-toLeft</div>
+        <div class="column-toTop-toLeft square-200 bgBlue100">
           <div class="square-60 bgOrange400 rounded-8"></div>
           <div class="square-80 bgBlue400 rounded-8"></div>
         </div>
       </div>
-      <div class="column toCenter spaceY2 p4">
-        <div>column putTop putCenterX</div>
-        <div class="column putTop putCenterX square-200 bgBlue100">
+      <div class="column-toCenter spaceY2 p4">
+        <div>column-toTop-toCenterX</div>
+        <div class="column-toTop-toCenterX square-200 bgBlue100">
           <div class="square-60 bgOrange400 rounded-8"></div>
           <div class="square-80 bgBlue400 rounded-8"></div>
         </div>
       </div>
-      <div class="column toCenter spaceY2 p4">
-        <div>column putTop putRight</div>
-        <div class="column putTop putRight square-200 bgBlue100">
+      <div class="column-toCenter spaceY2 p4">
+        <div>column-toTop-toRight</div>
+        <div class="column-toTop-toRight square-200 bgBlue100">
           <div class="square-60 bgOrange400 rounded-8"></div>
           <div class="square-80 bgBlue400 rounded-8"></div>
         </div>
