@@ -1,15 +1,19 @@
 <template>
-  <div class="toEvenly p4">
-    <div class="easeLinear transitionCommon duration-600 scale-120--hover translateY-10 bgBlue500--hover">
+  <div class="spaceY-24">
+    <div>easeLinear transitionCommon duration-600 scale-120--hover translateY-10 toCenter square-150 bgYellow300 bgBlue500--hover</div>
+    <div class="easeLinear transitionCommon duration-600 scale-120--hover translateY-10 toCenter square-150 bgYellow300 bgBlue500--hover">
       easeLinear
     </div>
-    <div class="easeIn transitionCommon duration-600 scale-120--hover translateY-10 bgBlue500--hover">
+    <div>easeIn transitionCommon duration-600 scale-120--hover translateY-10 toCenter square-150 bgYellow300 bgBlue500--hover</div>
+    <div class="easeIn transitionCommon duration-600 scale-120--hover translateY-10 toCenter square-150 bgYellow300 bgBlue500--hover">
       easeIn
     </div>
-    <div class="easeOut transitionCommon duration-600 scale-120--hover translateY-10 bgBlue500--hover">
+    <div>easeOut transitionCommon duration-600 scale-120--hover translateY-10 toCenter square-150 bgYellow300 bgBlue500--hover</div>
+    <div class="easeOut transitionCommon duration-600 scale-120--hover translateY-10 toCenter square-150 bgYellow300 bgBlue500--hover">
       easeOut
     </div>
-    <div class="easeInOut transitionCommon duration-600 scale-120--hover translateY-10 bgBlue500--hover">
+    <div>easeInOut transitionCommon duration-600 scale-120--hover translateY-10 toCenter square-150 bgYellow300 bgBlue500--hover</div>
+    <div class="easeInOut transitionCommon duration-600 scale-120--hover translateY-10 toCenter square-150 bgYellow300 bgBlue500--hover">
       easeInOut
     </div>
   </div>

@@ -110,7 +110,7 @@
         9
       </div>
     </div>
-    <h2>hidden</h2>
+    <h2>hidden A</h2>
     <div class="white spaceX2">
       <div class="bgOrange400 rounded-8 p4 hidden">
         A
@@ -124,8 +124,8 @@
     </div>
     <h2>display</h2>
     <div class="spaceY-10">
-      <div class="bgOrange400 rounded-8 square-100 display-inline-grid"></div>
-      <div class="bgOrange400 rounded-8 square-100 display-table"></div>
+      <div class="bgOrange400 rounded-8 square-150 display-inline-grid">display-inline-grid</div>
+      <div class="bgOrange400 rounded-8 square-150 display-table">display-table</div>
     </div>
   </div>
 </template>

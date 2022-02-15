@@ -1,4 +1,5 @@
 <template>
+  <h2>grid gridTemplateColumns-3 gap-20</h2>
   <div class="grid gridTemplateColumns-3 gap-20 white fontBold textXL">
     <div class="py1 rounded-4 toCenter bgTeal400">
       1
