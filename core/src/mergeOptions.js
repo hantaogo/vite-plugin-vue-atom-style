@@ -1,4 +1,5 @@
 import { isObject } from './utils/isObject'
+import { mergeDeep } from './utils/mergeDeep'
 
 export const mergeOptions = opts => {
   let config = {}
@@ -10,7 +11,7 @@ export const mergeOptions = opts => {
     for (const preset of opts.presets) {
       // 合并config
       if (isObject(preset.config)) {
-        config = Object.assign(config, preset.config)
+        config = mergeDeep(config, preset.config)
       }
       // 合并快捷方式
       if (isObject(preset.shortcuts)) {
@@ -29,7 +30,7 @@ export const mergeOptions = opts => {
 
   // 合并config
   if (isObject(opts.config)) {
-    config = Object.assign(config, opts.config)
+    config = mergeDeep(config, opts.config)
   }
   // 合并快捷方式
   if (isObject(opts.shortcuts)) {
