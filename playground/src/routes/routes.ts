@@ -28,6 +28,7 @@ import ListType from '@/views/ListType.vue'
 import BackgroundColor from '@/views/BackgroundColor.vue'
 import PlaceholderColor from '@/views/PlaceholderColor.vue'
 import TextAlignment from '@/views/TextAlignment.vue'
+import VerticalAlign from '@/views/VerticalAlign.vue'
 import TextDecoration from '@/views/TextDecoration.vue'
 import TextTransform from '@/views/TextTransform.vue'
 import FontFamily from '@/views/FontFamily.vue'
@@ -182,6 +183,10 @@ export const routes = [
   {
     path: '/PlaceholderColor',
     component: PlaceholderColor,
+  },
+  {
+    path: '/VerticalAlign',
+    component: VerticalAlign,
   },
   {
     path: '/TextAlignment',
