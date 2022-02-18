@@ -13,6 +13,8 @@ export default defineConfig({
   plugins: [
     atomStyle({
       presets: [presetFower],
+      // 设置flag为非空字符串时，可以跳过没有`startsWith(flag)`的代码，用来兼容旧代码，避免class名字冲突
+      // flag: '<!-- atom-style -->',
       // debug: {
       //   className: 'inlineBlock'
       // },

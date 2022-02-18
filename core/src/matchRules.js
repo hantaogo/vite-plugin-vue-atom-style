@@ -20,6 +20,9 @@ export const matchRules = (className, options) => {
 
 const matchClassName = (className, options) => {
   const result = parseClassName(className, options)
+  if (!result) {
+    return
+  }
   const rule = options.rules.find(rule => rule.match(result.name, options.config))
   // 方便调试
   if (options.debug.className && className.toLowerCase().startsWith(options.debug.className.toLowerCase())) {

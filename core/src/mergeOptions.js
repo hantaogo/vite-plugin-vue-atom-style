@@ -51,5 +51,6 @@ export const mergeOptions = opts => {
     marks,
     shortcuts,
     debug: opts.debug || {},
+    flag: opts.flag || '',
   }
 }

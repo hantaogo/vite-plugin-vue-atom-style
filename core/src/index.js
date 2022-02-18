@@ -11,6 +11,9 @@ export default (args = {}) => {
       if (!fileRegex.test(id)) {
         return
       }
+      if (options.flag && !code.startsWith(options.flag)) {
+        return
+      }
       return transformSFC(code, options)
     },
     handleHotUpdate(ctx) {

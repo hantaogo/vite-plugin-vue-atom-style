@@ -17,14 +17,21 @@ export const generate = (code, options) => {
       const { name, rule, marks } = result
 
       // 翻译规则
-      let obj = rule.translate(name, options.config, classNames)
+      let obj = null
+      try {
+        obj = rule.translate(name, options.config, classNames)
+      } catch (error) {
+      }
       if (!obj) {
         continue
       }
 
       // 翻译标记
       for (const { markName, mark } of marks) {
-        obj = Object.assign(obj, mark.translate(markName, options.config, obj, classNames))
+        try {
+          obj = Object.assign(obj, mark.translate(markName, options.config, obj, classNames))
+        } catch(error) {
+        }
       }
 
       // 生成css
