@@ -11,6 +11,11 @@ export default (args = {}) => {
       if (!fileRegex.test(id)) {
         return
       }
+      // 忽略有标记的文件
+      if (options.ignoreFlag && code.startsWith(options.ignoreFlag)) {
+        return
+      }
+      // 只使用有标记的文件
       if (options.flag && !code.startsWith(options.flag)) {
         return
       }
