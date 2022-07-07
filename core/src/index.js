@@ -10,6 +10,9 @@ export default (args = {}) => {
       if (!fileRegex.test(filePath)) {
         return
       }
+      if (!code) {
+        return
+      }
       // 忽略有标记的文件
       if (options.ignoreFlag && code.startsWith(options.ignoreFlag)) {
         return
@@ -27,6 +30,9 @@ export default (args = {}) => {
       const read = ctx.read
       ctx.read = async () => {
         const code = await read()
+        if (!code) {
+          return
+        }
         // 忽略有标记的文件
         if (options.ignoreFlag && code.startsWith(options.ignoreFlag)) {
           return
