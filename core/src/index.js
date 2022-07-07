@@ -8,18 +8,18 @@ export default (args = {}) => {
     name: 'vite-plugin-vue-atom-style',
     transform(code, filePath) {
       if (!fileRegex.test(filePath)) {
-        return
+        return code
       }
       if (!code) {
-        return
+        return code
       }
       // 忽略有标记的文件
       if (options.ignoreFlag && code.startsWith(options.ignoreFlag)) {
-        return
+        return code
       }
       // 只使用有标记的文件
       if (options.flag && !code.startsWith(options.flag)) {
-        return
+        return code
       }
       return transformSFC(code, options)
     },
@@ -31,15 +31,15 @@ export default (args = {}) => {
       ctx.read = async () => {
         const code = await read()
         if (!code) {
-          return
+          return code
         }
         // 忽略有标记的文件
         if (options.ignoreFlag && code.startsWith(options.ignoreFlag)) {
-          return
+          return code
         }
         // 只使用有标记的文件
         if (options.flag && !code.startsWith(options.flag)) {
-          return
+          return code
         }
         return transformSFC(code, options) || code
       }
