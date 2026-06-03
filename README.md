@@ -19,8 +19,7 @@ Vue3的原子类样式引擎，为了创造一个简单，兼容性强，且容�
 - Vite
 
 ## 演示
-在线演示：
-http://atomstyle.japple.fun
+在线演示：https://vite-plugin-vue-atom-style.vercel.app
 
 本地运行：
 ```
